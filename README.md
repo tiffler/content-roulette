@@ -2,13 +2,13 @@
 
 **Stop Lorem'ing your Ipsum.**
 
-A mock data generator for designers who are tired of filling their Figma frames with "John Doe" and fake@email.com. Built as a web app and a Figma plugin, because copy-pasting from a browser is *so* 2019.
+A mock data generator for anyone who's tired of testing with "Jane Doe" and fake@email.com. Built as a web app and a [Figma plugin](https://www.figma.com/community/plugin/1603319090043870718/content-roulette), because I got tired of copy-pasting like it's 2012.
 
 ---
 
 ## What it does
 
-Generates realistic-looking fake data so your designs don't look like they were filled out by a robot (ironic, I know). One click gets you:
+Generates realistic-looking mock data so your designs don't look like they were filled out by a robot (ironic, I know). One click gets you:
 
 - 👤 Names, job titles, emails, phone numbers, usernames
 - 🏢 Organization names, app names, URLs
@@ -16,11 +16,11 @@ Generates realistic-looking fake data so your designs don't look like they were 
 - 💻 Device names, serial numbers, asset tags
 - 📦 Tracking numbers, IP addresses, MAC addresses
 - 📅 Dates, times, currency, percentages, credit cards
-- and the occasional **Narwhal Wrangler** job title if you're lucky
+- and the occasional **Narwhal Detective** job title if you're lucky
 
 ## Use it
 
-**Web app** → just open `index.html`. No build step, no npm install, no existential crisis.
+**Web app** → just open `index.html`. No build step, no npm install, no existential crisis (that's sold seperately)
 
 **Figma plugin** → [Content Roulette on Figma Community](https://www.figma.com/community/plugin/1603319090043870718/content-roulette)
 
@@ -28,8 +28,8 @@ Generates realistic-looking fake data so your designs don't look like they were 
 
 ## Stack
 
-HTML, CSS, vanilla JS. The way the internet intended before everything needed a framework.
+Simple HTML, CSS, vanilla JS.
 
 ---
 
-*Made by a designer who learned just enough JavaScript to be dangerous.*
+*Built by a [tiffler](https://www.tienmedia.com) and her AI sidekick [AU-D8](https://claude.com/product/claude-code)*

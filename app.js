@@ -1,7 +1,7 @@
 
     // ─── Theme ────────────────────────────────────────────────────
     function initTheme() {
-        const saved = localStorage.getItem('theme') || 'light';
+        const saved = localStorage.getItem('theme') || 'dark';
         const btn   = document.getElementById('theme-toggle');
         document.documentElement.setAttribute('data-theme', saved);
         btn.textContent = saved === 'dark' ? '☀️' : '🌙';
