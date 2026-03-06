@@ -12,8 +12,8 @@
     --header-bg: linear-gradient(135deg, #6d28d9 0%, #a855f7 55%, #ec4899 100%);
     --header-hover: #5b21b6;
     --bulk-bg: #faf7ff;
-    --btn-bg: #953fca;
-    --btn-bg-hover: #782fa5;
+    --btn-bg: #4a3178;
+    --btn-bg-hover: #3d2767;
     --output-bg: #f8f4ff;
     --output-success-bg: #ecfdf5;
     --output-success-border: #10b981;
@@ -35,8 +35,8 @@
     --header-bg: linear-gradient(135deg, #3b0764 0%, #6d28d9 55%, #9d174d 100%);
     --header-hover: #4c1d95;
     --bulk-bg: #130f22;
-    --btn-bg: #c68cff;
-    --btn-bg-hover: #d5abff;
+    --btn-bg: #6b50a8;
+    --btn-bg-hover: #5c4498;
     --output-bg: #1e1638;
     --output-success-bg: #052e1c;
     --output-success-border: #10b981;
@@ -183,14 +183,14 @@ p.subtitle { color: rgba(255,255,255,0.90); font-size: 1em; }
 .card-title small { font-size: 0.68em; font-weight: 400; opacity: 0.6; }
 
 .generate-btn {
-    background: var(--btn-bg); color: white;
+    background: var(--btn-bg); color: #e8e0f5;
     border: none; padding: 12px 24px;
     border-radius: 8px; cursor: pointer;
     font-size: 1em; font-weight: 500;
     width: 100%; margin-bottom: 15px;
     transition: background-color 0.2s;
 }
-[data-theme="dark"] .generate-btn { color: #1a202c; }
+[data-theme="dark"] .generate-btn { color: #e8e0f5; }
 .generate-btn:hover { background: var(--btn-bg-hover); }
 
 .output {
