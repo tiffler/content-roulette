@@ -20,7 +20,7 @@ Generates realistic-looking mock data so your designs don't look like they were 
 
 ## Use it
 
-**Web app** → just open `index.html`. No build step, no npm install, no existential crisis (that's sold seperately)
+**Web app** → [tiffler.github.io/content-roulette](https://tiffler.github.io/content-roulette/) — or clone the repo and open `index.html` locally. No build step, no npm install, no existential crisis (that's sold separately)
 
 **Figma plugin** → [Content Roulette on Figma Community](https://www.figma.com/community/plugin/1603319090043870718/content-roulette)
 
