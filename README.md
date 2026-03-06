@@ -32,4 +32,4 @@ Simple HTML, CSS, vanilla JS.
 
 ---
 
-*Built by a [tiffler](https://www.tienmedia.com) and her AI sidekick [AU-D8](https://claude.com/product/claude-code)*
+*Built by a [tiffler](https://www.tienmedia.com) and her AI sidekick [SYNT4X](https://claude.com/product/claude-code)*
