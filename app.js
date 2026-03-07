@@ -32,8 +32,13 @@
         },
 
         funJobTitle() {
-            const prefix = Math.random() < 0.4 ? pick(DATA.jobTitlePrefixes) + ' ' : '';
-            return prefix + pick(DATA.jobTitleFunnyNouns) + ' ' + pick(DATA.jobTitleFunnyRoles);
+            const r = Math.random();
+            const core = r < 0.33
+                ? pick(DATA.jobTitleFunnyModifiers) + ' ' + pick(DATA.jobTitleFunnyRoles)
+                : r < 0.66
+                ? pick(DATA.jobTitleFunnyNouns) + ' ' + pick(DATA.jobTitleFunnyRoles)
+                : pick(DATA.jobTitleFunnyModifiers) + ' ' + pick(DATA.jobTitleFunnyNouns) + ' ' + pick(DATA.jobTitleFunnyRoles);
+            return core;
         },
 
         jobTitle() {
@@ -132,7 +137,18 @@
         url() {
             const sub  = Math.random() < 0.7 ? pick(DATA.urlSubdomains) + '.' : '';
             const path = Math.random() < 0.75 ? '/' + pick(DATA.urlPaths) : '';
-            return `https://${sub}${pick(DATA.urlDomains)}.${pick(DATA.urlTLDs)}${path}`;
+            let query = '';
+            if (Math.random() < 0.25) {
+                const pool = [
+                    ...DATA.urlQueryParams,
+                    'page=' + (Math.floor(Math.random() * 9) + 1),
+                    'limit=' + String(Math.floor(Math.random() * 90) + 10),
+                ];
+                const count = Math.random() < 0.5 ? 1 : 2;
+                const shuffled = pool.slice().sort(() => Math.random() - 0.5);
+                query = '?' + shuffled.slice(0, count).join('&');
+            }
+            return `https://${sub}${pick(DATA.urlDomains)}.${pick(DATA.urlTLDs)}${path}${query}`;
         },
 
         mac() {
@@ -189,14 +205,14 @@
         },
 
         shortDate() {
-            const y = Math.floor(Math.random() * 6) + 2025;
+            const y = Math.floor(Math.random() * 11) + 2018;
             const m = Math.floor(Math.random() * 12) + 1;
             const d = Math.floor(Math.random() * 28) + 1;
             return `${pad2(m)}/${pad2(d)}/${y}`;
         },
 
         shortYearDate() {
-            const y = Math.floor(Math.random() * 6) + 2025;
+            const y = Math.floor(Math.random() * 11) + 2018;
             const m = Math.floor(Math.random() * 12) + 1;
             const d = Math.floor(Math.random() * 28) + 1;
             return `${pad2(m)}/${pad2(d)}/${('' + y).slice(-2)}`;
@@ -204,7 +220,7 @@
 
         abbrDate() {
             const mo = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-            const y  = Math.floor(Math.random() * 6) + 2025;
+            const y  = Math.floor(Math.random() * 11) + 2018;
             const m  = Math.floor(Math.random() * 12);
             const d  = Math.floor(Math.random() * 28) + 1;
             return `${mo[m]} ${d}, ${y}`;
@@ -212,7 +228,7 @@
 
         longDate() {
             const mo = ['January','February','March','April','May','June','July','August','September','October','November','December'];
-            const y  = Math.floor(Math.random() * 6) + 2025;
+            const y  = Math.floor(Math.random() * 11) + 2018;
             const m  = Math.floor(Math.random() * 12);
             const d  = Math.floor(Math.random() * 28) + 1;
             return `${mo[m]} ${d}, ${y}`;

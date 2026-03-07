@@ -49,7 +49,7 @@ const DATA = {
     'Mahmoud', 'Majid', 'Manal', 'Marwan', 'Maryam', 'Mazen', 'Mona', 'Musa',
     'Nabil', 'Nadia', 'Nadine', 'Najwa', 'Nasser', 'Nizar', 'Noor', 'Nour',
     'Omar', 'Qasim', 'Rami', 'Rana', 'Rania', 'Reem', 'Reza', 'Rim',
-    'Saad', 'Salam', 'Salem', 'Salim', 'Sami', 'Samar', 'Sana', 'Sari',
+    'Saad', 'Salam', 'Salem', 'Salim', 'Sami', 'Samar', 'Sana',
     'Soraya', 'Tala', 'Tarek', 'Tariq',
     'Wael', 'Wafa', 'Walid', 'Yasmin', 'Yousef', 'Yusuf', 'Zahra', 'Zainab', 'Ziad',
 
@@ -205,7 +205,7 @@ const DATA = {
     'Kuhn', 'Larsen', 'Larsson', 'Laurent', 'Leroy', 'Lindgren', 'Lindqvist', 'Lombardi',
     'Lund', 'Lundberg', 'Maas', 'Madsen', 'Magnusson', 'Makris', 'Makarov', 'Mancini',
     'Marino', 'Mayer', 'McPierce', 'Meier', 'Miller', 'Millington', 'Moreau', 'Morin',
-    'Muller', 'Nelson', 'Nielsen', 'Nissen', 'Novak', 'Nowak', "O'Connor", 'Olsen',
+    'Muller', 'Nelson', 'Nielsen', 'Nissen', 'Novak', 'Nowak', 'O\'Connor', 'Olsen',
     'Pappas', 'Papadopoulos', 'Pearson', 'Persson', 'Peters', 'Petit', 'Petrov', 'Picard',
     'Popov', 'Ricci', 'Ribeiro', 'Richter', 'Romano', 'Rossi', 'Roux', 'Rousseau',
     'Salvadori', 'Santoro', 'Schneider', 'Silvestri', 'Sokolova', 'Stein', 'Strand',
@@ -237,7 +237,7 @@ const DATA = {
     'Maddox', 'Manning', 'Marsh', 'Marshall', 'Martin', 'Maxwell', 'McCarthy', 'McCoy',
     'McGregor', 'McKnight', 'McKinley', 'Miles', 'Mitchell', 'Monroe', 'Montgomery', 'Mooney',
     'Moore', 'Morrison', 'Murphy', 'Murray', 'Myers',
-    'Nash', 'Neal', 'Newman', 'Newton', 'Nichols', 'Norris', "O'Brien", 'Oliver', 'Owens',
+    'Nash', 'Neal', 'Newman', 'Newton', 'Nichols', 'Norris', 'O\'Brien', 'Oliver', 'Owens',
     'Page', 'Patterson', 'Payne', 'Pierce', 'Porter', 'Powell', 'Price',
     'Ramsey', 'Ravencroft', 'Ray', 'Reed', 'Reeves', 'Reid', 'Reitman', 'Reynolds',
     'Richardson', 'Roberts', 'Robinson', 'Rogers', 'Roper', 'Ross', 'Rossman', 'Russell',
@@ -275,13 +275,9 @@ const DATA = {
     'Systems Administrator', 'Network Engineer', 'IT Specialist', 'Cloud Architect',
   ],
 
-  jobTitleFunnyRoles: [
-    'Detective', 'Tamer', 'Wrangler', 'Inspector', 'Whisperer', 'Debugger',
-    'Overlord', 'Evangelist', 'Ninja', 'Watcher', 'Side Eyer', 'Wizard', 'Sensei',
-    'Herder', 'Enthusiast', 'Connoisseur', 'Goblin', 'Gremlin', 'Oracle',
-    'Hoarder', 'Captain', 'Ranger', 'Gatekeeper', 'Consultant', 'Strategist',
-    'Auditor', 'Sleuth', 'Champion', 'Guardian', 'Alchemist', 'Shot Caller', 'Ringmaster',
-    'Cryptid', 'Seer', 'Trailblazer', 'Liaison', 'Lore Keeper', 'Agent', 'Menace'
+
+  jobTitleFunnyModifiers: [
+    'Haunted', 'Burnt Out', 'Dissociating', 'Deeply Exhausted', 'Emotionally Unavailable', 'Quietly Unraveling', 'Internally Screaming', 'Vaguely Traumatized', 'Suspicious', 'Dangerously Caffeinated', 'Chronically Overwhelmed', 'Barely Functional', 'Feral', 'Unhinged', 'Unbothered', 'Reluctant', 'Deprecated', 'Asynchronous', 'Glitchy', 'Buffering', 'Legacy', 'Blockchain-Adjacent', 'Agile', 'Scalable', 'Disruptive', 'Synergy-Driven', 'Vibes-Based', 'Ambient', 'Sentient', 'Main Character', 'Limited-Edition', 'NPC-Adjacent', 'Side Quest', 'Final Boss', 'Endgame', 'Delulu', 'Quantum', 'Virtual', 'Delusional', 'Caffeinated', 'Overstimulated', 'Hyperfocused', 'Sleep-Deprived', 'Skibidi', 'Vibing', 'Chonky', 'Confused', 'Panicking', 'Overthinking', 'Under-Caffeinated', 'Emotionally Exhausted', 'Existentially Dreaded', 'Perpetually Distracted', 'Mildly Anxious', 'Slightly Overqualified', 'Inexplicably Busy', 'Chronically Confused', 'Procrastinating', 'Daydreaming', 'Overworked', 'Hibernating', 'Overstimulated', 'Overperforming', 'Glitching', 'Mentally Exhausted', 'Silently Judgey', 'Spicy', 'Salty', 'Goofy', 'Quirky', 'Eccentric', 'Unstable', 'Chaotic', 'Mysterious', 'Enigmatic', 'Whimsical', 'Silly', 'Eccentric', 'Bored',
   ],
 
   jobTitleFunnyNouns: [
@@ -295,7 +291,22 @@ const DATA = {
     'Paperclip', 'Llama', 'Pogo Stick', 'Bubble Tea', 'Koala', 'Mystery Box',
     'Potato', 'Sandwich', 'Crystal Ball', 'Croissant', 'Disco', 'Puppy', 'Turtle',
     'Ducky', 'Eggroll', 'Gummy Bear', 'Pixel', 'Tofu', 'Bobblehead', 'CAPTCHA',
-    'Spinning Wheel', 'Oxford Comma', 'Ancient Scroll', 'Sentient Roomba', 'Poral'
+    'Spinning Wheel', 'Oxford Comma', 'Ancient Scroll', 'Sentient Roomba', 'Portal',
+    'Umbrella', 'Lost Sock', 'Sock Monkey', 'Time Machine', 'Invisible Cloak', 'Teleportation',
+    'Magic 8-Ball', 'Fortune Cookie', 'Dumpling', 'Bouncy Ball', 'Slinky', 'Ball Pit', 'Jellybean',
+    'Sparkle', 'Marshmallow', 'Confetti', 'Deflated Balloon', 'Yak', 'Meerkat', 'Garden Gnome',
+    'Lava Lamp', 'Couch Cushion', 'Falafel', 'Squeegee', 'Tape Dispenser', 'Pencil Sharpener', 'Tumbleweed', 'Pinecone', 'Cactus', 'Tumbleweed', 'Seaweed', 'Sandcastle', 'Unicycle', 'Traffic Cone', 'Slingshot', 'Frisbee', 'Pinata',
+    'Spaceship', 'Merge Conflict', '404 Error', 'Blue Screen of Death', 'Reboot', 'System Crash', 'Kernel Panic',
+    'Circus', 'Buffalo', 'Lint Roller', 'Cubicle', 'Water Cooler', 'Typewriter', 'Slide Deck', 'Clipboard', 'Elevator Pitch', 'Pinwheel'
+  ],
+
+    jobTitleFunnyRoles: [
+    'Detective', 'Tamer', 'Wrangler', 'Inspector', 'Whisperer', 'Debugger',
+    'Overlord', 'Evangelist', 'Ninja', 'Watcher', 'Side Eyer', 'Wizard', 'Sensei',
+    'Herder', 'Enthusiast', 'Connoisseur', 'Goblin', 'Gremlin', 'Oracle',
+    'Hoarder', 'Captain', 'Ranger', 'Gatekeeper', 'Consultant', 'Strategist',
+    'Auditor', 'Sleuth', 'Champion', 'Guardian', 'Alchemist', 'Shot Caller', 'Ringmaster',
+    'Cryptid', 'Seer', 'Trailblazer', 'Liaison', 'Lore Keeper', 'Agent', 'Menace', 'Concierge', 'Provocateur', 'Ambassador', 'Sage', 'Enforcer', 'Overseer', 'Facilitator', 'Bamboozler', 'Mischief Maker', 'Puppet Master', 'Ringleader', 'Taskmaster', 'Trendsetter', 'Visionary', 'Vanguard', 'Warlord', 'Zealot', 'Rider', 'Gladiator', 'Summoner', 'Paladin', 'Bard', 'Navigator', 'Negotiator', 'Guide', 'Protector', 'Maverick', 'Disruptor', 'Luminary', 'Architect'
   ],
 
   jobTitleSuffixes: ['II', 'III'],
@@ -346,23 +357,23 @@ const DATA = {
     'Paradigm', 'Infinity', 'Unity', 'Zen', 'Vantage', 'Horizon', 'Meridian', 'Crestwood', 'Ironclad',
     'Cobalt', 'Ember', 'Solace', 'Ardent', 'Cascade', 'Drift', 'Forge', 'Haven', 'Keystone', 'Lumen',
     'Luminary', 'Nova', 'Onyx', 'Orbit', 'Prism', 'Pulse', 'Radiant', 'Reverie', 'Sapphire', 'Shadow', 'Silver',
-    'Skyline', 'Solaris', 'Spectra', 'Stratus', 'Summit', 'Tidal', 'Vortex', 'Zenith',
+    'Skyline', 'Solaris', 'Spectra', 'Stratus', 'Tidal', 'Vortex',
     'Arc', 'Beacon', 'Crest', 'Eclipse', 'Frontier', 'Gateway', 'Harbor', 'Ignite',
     'Northgate', 'Obsidian', 'Paragon', 'Quorum', 'Redwood', 'Sandstone', 'Threshold',
-    'Trilogy', 'Vanguard', 'Vertex', 'Vista', 'Wavelength', 'Windward',
-    'Dynamic', 'Synergy', 'Titan','Paradigm', 'Ascend', 'Overwatch', 'Helix', 'Sentinel',
-    'Cipher', 'Enigma', 'Evolve', 'Flux', 'Ignite', 'Noble', 'Radiance', 'Synapse', 'Umbra',
-    'Arcane', 'Parallax', 'Quantum', 'Tempest', 'Equinox', 'Obelisk', 'Aeon', 'Aether', 'Celestial',
+    'Trilogy', 'Vanguard', 'Vista', 'Wavelength', 'Windward',
+    'Dynamic', 'Synergy', 'Paradigm', 'Ascend', 'Overwatch', 'Helix', 'Sentinel',
+    'Cipher', 'Enigma', 'Evolve', 'Flux', 'Noble', 'Radiance', 'Synapse', 'Umbra',
+    'Arcane', 'Parallax', 'Tempest', 'Equinox', 'Obelisk', 'Aeon', 'Aether', 'Celestial',
     'Uplift', 'Waterfall', 'Crossroads', 'Daybreak', 'Frontline', 'Greenfield', 'Highpoint',
     'Landmark', 'Overture', 'Pathfinder', 'Ridgeline', 'Springboard', 'Trailhead', 'Wavecrest',
     'Super', 'Jazzy', 'Fluffy', 'Snappy', 'Zesty', 'Wobbly', 'Chunky', 'Plucky', 'Spunky', 'Cheerful',
-    'Squirrel', 'Narwhal', 'Platypus', 'Bumblebee', 'Hedgehog', 'Capybara', 'Wombat',
+    'Squirrel', 'Narwhal', 'Platypus', 'Bumblebee', 'Hedgehog', 'Wombat',
     'Naptime', 'Biscuit', 'Noodle', 'Waffle', 'Muffin', 'Pretzel', 'Sprinkle', 'Pudding', 'French Toast',
     'Hashbrown', 'Corndog', 'Avocado', 'Kimchi', 'Wasabi',
     'Thunderbolt', 'Rocketship', 'Moonbeam', 'Stardust', 'Lightning', 'Tornado', 'Avalanche',
     'Nimbus', 'Gale', 'Sploot', 'Cloud', 'Willow', 'Clover', 'Neon',
     'Cactus', 'Flamingo', 'Otter', 'Penguin', 'Sloth', 'Llama', 'Axolotl',
-    'Unicorn', 'Dragon', 'Griffin', 'Phoenix', 'Mermaid', 'Centaur', 'Minotaur', 'Sphinx',
+    'Unicorn', 'Dragon', 'Mermaid', 'Centaur', 'Minotaur', 'Sphinx',
     'Undead', 'Shamen', 'Hippogryph', 'Golem', 'Gargoyle', 'Spiral',
     'Aquarius', 'Pisces', 'Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo', 'Libra', 'Scorpio', 'Sagittarius', 'Capricorn',
     'Pegasus', 'Siren', 'Fairy', 'Kaleidoscope', 'Maven', 'Oracle', 'Sage', 'Seer', 
@@ -407,10 +418,10 @@ const DATA = {
     'Springfield', 'Georgetown', 'Arlington', 'Fairview', 'Brookfield', 'Richmond', 'Aurora',
     'Oakland', 'Ashland', 'Burlington', 'Manchester', 'Oxford', 'Clayton', 'Hudson', 'Kingston',
     'Baybrook', 'Forestdale', 'Jade Harbor', 'Echo Valley', 'Ironwood', 'Fox Run', 'Bluewater',
-    'Hawkins', 'Stepford', 'Mountainview', 'Darkwood', "Raven's Hollow", 'River',
+    'Hawkins', 'Stepford', 'Mountainview', 'Darkwood', 'Raven\'s Hollow', 'River',
     'Elm', 'Pineapple', 'Cherry Blossom', 'Dragonfly', 'Enchanted Forest', 'Sunset',
     'Galaxy', 'Neon', 'Pixel', 'Rainbow', 'Twilight', 'Wookiee', 'Xandar', 'Yoda', 'Zelda',
-    'Baker', 'Wallaby', 'Sesame', "Frodo", "Gandalf", 'Narnia', 'Westeros', 'Hogwarts',
+    'Baker', 'Wallaby', 'Sesame', 'Frodo', 'Gandalf', 'Narnia', 'Westeros', 'Hogwarts',
     'Diagon', 'Mordor', 'Asgard', 'Funky Town', 'Sleepy Hollow', 'Hobbiton', 'Liberty',
     'Lego Bay', 'Cantina'
   ],
@@ -426,7 +437,7 @@ const DATA = {
     'Baybrook', 'Forestdale', 'Cyclone Valley', 'Cosmos City', 'Kaleidoscope Falls', 'Jade Harbor',
     'Echo Valley', 'Thunderbluff', 'Orgrimmar', 'Mos Eisley', 'Gotham City', 'Metropolis', 'Silent Hill',
     'Vice City', 'Raccoon City', 'Hyrule', 'Derry', 'Sleepy Hollow', 'Liberty City', 'Hobbiton',
-    'River City', "Raven's Hollow", 'Darkwood', 'Brookfield', 'Awkwardville', 'Mountainview',
+    'River City', 'Raven\'s Hollow', 'Darkwood', 'Awkwardville', 'Mountainview',
     'Hawkins', 'Kakariko Village', 'Citadel', 'Stepford', 'Boston', 'Chicago', 'Denver', 'Phoenix',
     'Portland', 'Seattle', 'Austin', 'Nashville', 'Charlotte', 'Raleigh', 'Tampa', 'Miami',
     'Atlanta', 'Detroit', 'Minneapolis', 'St. Louis', 'Kansas City', 'Oklahoma City', 'Las Vegas',
@@ -436,9 +447,9 @@ const DATA = {
     'Portsmouth', 'Suffolk', 'Lynchburg', 'Roanoke', 'Blacksburg', 'Harrisonburg', 'Winchester',
     'New York', 'Buffalo', 'Rochester', 'Syracuse', 'Albany', 'New Rochelle', 'Mount Vernon',
     'White Plains', 'Hempstead', 'Troy', 'Niagara Falls', 'Binghamton',
-    'Mushroom Kingdom', 'Zootopia', 'San Fransokyo', 'Emerald City', 'Gotham City', 'Metropolis',
+    'Mushroom Kingdom', 'Zootopia', 'San Fransokyo', 'Emerald City',
     'Lego City', 'Cantina', 'Narnia', 'Westeros', 'Hogwarts', 'Diagon Alley',
-    'Mordor', 'Asgard', 'Funky Town', 'Sleepy Hollow', 'Liberty City', 'River City', 'Gondor', 'Rohan',
+    'Mordor', 'Asgard', 'Funky Town', 'Gondor', 'Rohan',
     'Mount. Olymppus', 'Camelot', 'Elysium', 'Mega City One', 'Cloud City', 'Bikini Bottom', 'Bedrock'
   ],
 
@@ -449,30 +460,30 @@ const DATA = {
   ],
 
   deviceBrands: [
-    "Dell",
-    "HP",
-    "Lenovo",
-    "ASUS",
-    "Microsoft",
-    "Acer",
-    "Razer",
-    "Samsung",
-    "Alienware"
+    'Dell',
+    'HP',
+    'Lenovo',
+    'ASUS',
+    'Microsoft',
+    'Acer',
+    'Razer',
+    'Samsung',
+    'Alienware'
   ],
 
   windowsModels: [
-    "XPS 13",
-    "XPS 15",
-    "Spectre x360",
-    "Pavilion 15",
-    "ThinkPad X1 Carbon",
-    "ThinkPad T14",
-    "ZenBook 14",
-    "ROG Zephyrus G14",
-    "Surface Laptop 5",
-    "Surface Laptop Studio 2",
-    "Legion 5 Pro",
-    "Inspiron 16 Plus"
+    'XPS 13',
+    'XPS 15',
+    'Spectre x360',
+    'Pavilion 15',
+    'ThinkPad X1 Carbon',
+    'ThinkPad T14',
+    'ZenBook 14',
+    'ROG Zephyrus G14',
+    'Surface Laptop 5',
+    'Surface Laptop Studio 2',
+    'Legion 5 Pro',
+    'Inspiron 16 Plus'
   ],
 
   windowsDeviceBases: [
@@ -521,7 +532,7 @@ const DATA = {
     'lunar', 'silent', 'blazing', 'frozen', 'golden', 'iron', 'lost', 'wild', 'tiny', 'epic', 'doom', 'that',
     'fuzzy', 'sleepy', 'happy', 'grumpy', 'zesty', 'sneaky', 'mighty', 'brave', 'clever', 'quirky', 'rocky',
     'clumsy', 'wobbly', 'goofy', 'derpy', 'wiggly', 'soggy', 'squishy', 'jittery', 'wacky', 'bonky', 'toasty', 'random',
-    'loopy', 'wonky', 'blobby', 'bumbling', 'rambunctious',
+    'loopy', 'wonky', 'blobby', 'bumbling', 'rambunctious', 'delulu', 'rizz',
     'cozy', 'sunny', 'fluffy', 'bubbly', 'cheerful', 'sparkly', 'jolly',
     'radiant', 'caring', 'hopeful', 'dreamy', 'sweet', 'whimsical', 'playful', 'snuggly', 'adorable', 'charming', 'delightful', 'enchanting', 'glowing', 'huggable', 'lovely', 'retro', 'musical', 'spicy', 'bouncy',
     'ancient', 'cosmic', 'digital', 'electric', 'galactic', 'hidden', 'infinite', 'magnetic', 'orbital', 'quantum', 'spooky', 'broody', 'fantastic', 
@@ -530,14 +541,14 @@ const DATA = {
 
   usernameNouns: [
     'falcon', 'wanderer', 'ninja', 'fox', 'wolf', 'panda', 'hawk', 'blade', 'comet', 'ranger', 'spoon', 'spork', 'sword', 'shield', 'phoenix', 'griffin', 'mermaid', 'centaur', 'minotaur', 'sphinx', 'golem', 'gargoyle', 'soup',
-    'coder', 'pilot', 'ghost', 'knight', 'sage', 'monk', 'raven', 'viper', 'lynx', 'echo', 'berry', 'pineapple', 'bobble', 'knickknack', 'panda',
-    'noodle', 'unicorn', 'waffle', 'biscuit', 'narwhal', 'penguin', 'sloth', 'otter', 'capybara', 'duck', 'dingbat', 'bunny', 'llama', 'wombat', 
-    'pretzel', 'muffin', 'goblin', 'hamster', 'turnip', 'gremlin', 'taco', 'burrito', 'donut', 'snorkel', 'codex', 'squid', 'doodle',
+    'coder', 'pilot', 'ghost', 'knight', 'sage', 'monk', 'raven', 'viper', 'lynx', 'echo', 'berry', 'pineapple', 'bobble', 'knickknack', 'slinky', 'shark', 'wizard', 'hermit', 'samurai', 'ronin', 'pirate', 'spartan', 'gladiator',
+    'noodle', 'unicorn', 'waffle', 'biscuit', 'narwhal', 'penguin', 'sloth', 'otter', 'capybara', 'duck', 'dingbat', 'bunny', 'llama', 'wombat', 'meerkat', 'dingo', 'yak', 'chincilla',
+    'pretzel', 'muffin', 'goblin', 'hamster', 'turnip', 'gremlin', 'taco', 'burrito', 'donut', 'snorkel', 'codex', 'squid', 'doodle', 'caboodle',
     'yeti', 'platypus', 'quokka', 'axolotl', 'blobfish', 'bear', 'dumpling',
     'sunflower', 'meadow', 'cookie', 'pebble', 'lantern', 'blanket', 'pudding', 'dewdrop', 'marshmallow', 'acorn', 'scone', 'teacup', 'puff',
     'flame', 'breeze', 'tulip', 'rainbow', 'kitten', 'corndog', 'tofu',
     'voyager', 'cipher', 'vertex', 'nomad', 'vector', 'phantom', 'signal', 'hero', 'drifter', 'nexus', 'corgi',
-    'oracle', 'specter', 'cosmos', 'ember'
+    'specter', 'cosmos', 'ember'
   ],
 
   statusLabels: [
@@ -546,17 +557,63 @@ const DATA = {
     'Processing', 'Completed', 'Failed', 'Expired', 'On Hold', 'Cancelled'
   ],
 
-  urlSubdomains: ['app', 'portal', 'admin', 'dashboard', 'api', 'my', 'hub', 'dev', 'staging', 'go'],
+  urlSubdomains: [
+    'app', 'portal', 'admin', 'dashboard', 'api', 'my', 'hub', 'dev', 'staging', 'go', 'console', 'platform', 'control', 'panel', 'manage',
+  'account', 'workspace', 'team', 'secure', 'cloud',
+  'data', 'ops', 'system', 'internal', 'core',
+  'edge', 'tools', 'services', 'gateway', 'status',
+  'auth', 'identity', 'login', 'access', 'support',
+  'help', 'docs', 'learn', 'sandbox', 'preview',
+  'test', 'beta', 'alpha', 'labs', 'playground',
+  'monitor', 'metrics', 'insights', 'analytics', 'engine',
+  'studio', 'controlroom'
+  ],
 
   urlDomains: [
     'nexuslabs', 'techcorp', 'getapex', 'tryorbit', 'usevega', 'gopulse', 'fluxhq',
-    'cobaltapp', 'heliohq', 'novadash', 'arccloud', 'keystoneio', 'luminary', 'forgehq'
+    'cobaltapp', 'heliohq', 'novadash', 'arccloud', 'keystoneio', 'luminary', 'forgehq', 'altitudehq', 'vectorlabs', 'skyforge', 'quantumstack',
+  'stellarcore', 'orbitworks', 'vertexcloud', 'fusiongrid',
+  'zenithsystems', 'pulseforge', 'stratifyhq', 'hypernova',
+  'gridcraft', 'cloudforge', 'hexalabs', 'dataspire',
+  'cortexcloud', 'nextvector', 'apexgrid', 'infrahive',
+  'cloudrally', 'byteforge', 'logicforge', 'datapulse',
+  'zenstack', 'stratosys', 'blueorbit', 'atlascloud',
+  'turbostack', 'orbitgrid', 'vectraflow', 'latticehq',
+  'dataspring', 'nebulaworks', 'prismcloud', 'helixlabs',
+  'skylinehq', 'circuitforge', 'velocitystack', 'arcflow',
+  'metacloud', 'vertexforge', 'gridlabs'
   ],
 
-  urlTLDs: ['io', 'com', 'co', 'app', 'net'],
+  urlTLDs: [
+  'io', 'com', 'co', 'app', 'net', 'dev', 'cloud', 'tech', 'ai', 'tools',
+  'systems', 'hq', 'digital', 'software', 'site', 'online', 'services'
+  ],
 
   urlPaths: [
     'dashboard', 'settings', 'profile', 'users', 'reports', 'account',
-    'overview', 'admin', 'home', 'devices', 'activity', 'billing', 'integrations', 'alerts'
+    'overview', 'admin', 'home', 'devices', 'activity', 'billing', 'integrations', 'alerts',
+     'workspace', 'team', 'members', 'permissions', 'roles',
+  'logs', 'audit', 'events', 'history', 'monitoring',
+  'metrics', 'analytics', 'insights', 'performance',
+  'security', 'access', 'tokens', 'keys', 'secrets',
+  'deployments', 'pipelines', 'builds', 'releases',
+  'environments', 'configs', 'preferences',
+  'notifications', 'messages', 'tasks', 'jobs',
+  'scheduler', 'automation', 'workflows',
+  'connections', 'sources', 'destinations',
+  'data', 'datasets', 'storage', 'backups',
+  'usage', 'limits', 'plans', 'subscriptions',
+  'support', 'tickets', 'docs', 'guides'
+  ],
+
+  urlQueryParams: [
+  'sort=recent',
+  'sort=created',
+  'filter=active',
+  'filter=failed',
+  'view=list',
+  'view=grid',
+  'tab=settings',
+  'tab=overview'
   ],
 };
