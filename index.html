@@ -49,11 +49,11 @@
                 <optgroup label="👤 People &amp; Contact">
                     <option value="names">Full Name</option>
                     <option value="jobTitle">Job Title</option>
+                    <option value="funJobTitle">Fun Job Title</option>
+                     <option value="username">Username</option>
                     <option value="personalEmails">Personal Email</option>
                     <option value="workEmails">Work Email</option>
                     <option value="phones">Phone Number</option>
-                    <option value="username">Username</option>
-                    <option value="cityState">City &amp; State</option>
                     <option value="addresses">Full Address</option>
                 </optgroup>
                 <optgroup label="🏢 Business &amp; Apps">
@@ -116,6 +116,20 @@
         </div>
 
         <div class="generator-card">
+            <div class="card-title"><span class="card-icon">🤡</span>Fun Job Title</div>
+            <button class="generate-btn" onclick="gen('funJobTitle')">Generate Fun Job Title</button>
+            <div id="funJobTitle-output" class="output" onclick="copyOutput('funJobTitle')">Click to generate</div>
+            <div id="funJobTitle-copy" class="copy-notice">Copied!</div>
+        </div>
+
+        <div class="generator-card">
+            <div class="card-title"><span class="card-icon">@</span>Username</div>
+            <button class="generate-btn" onclick="gen('username')">Generate Username</button>
+            <div id="username-output" class="output" onclick="copyOutput('username')">Click to generate</div>
+            <div id="username-copy" class="copy-notice">Copied!</div>
+        </div>
+
+        <div class="generator-card">
             <div class="card-title"><span class="card-icon">✉️</span>Personal Email</div>
             <button class="generate-btn" onclick="gen('personalEmails')">Generate Personal Email</button>
             <div id="personalEmails-output" class="output" onclick="copyOutput('personalEmails')">Click to generate</div>
@@ -134,20 +148,6 @@
             <button class="generate-btn" onclick="gen('phones')">Generate Phone</button>
             <div id="phones-output" class="output" onclick="copyOutput('phones')">Click to generate</div>
             <div id="phones-copy" class="copy-notice">Copied!</div>
-        </div>
-
-        <div class="generator-card">
-            <div class="card-title"><span class="card-icon">@</span>Username</div>
-            <button class="generate-btn" onclick="gen('username')">Generate Username</button>
-            <div id="username-output" class="output" onclick="copyOutput('username')">Click to generate</div>
-            <div id="username-copy" class="copy-notice">Copied!</div>
-        </div>
-
-        <div class="generator-card">
-            <div class="card-title"><span class="card-icon">📍</span>City &amp; State</div>
-            <button class="generate-btn" onclick="gen('cityState')">Generate City &amp; State</button>
-            <div id="cityState-output" class="output" onclick="copyOutput('cityState')">Click to generate</div>
-            <div id="cityState-copy" class="copy-notice">Copied!</div>
         </div>
 
         <div class="generator-card">

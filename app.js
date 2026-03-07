@@ -31,14 +31,15 @@
             return `${pick(DATA.firstNames)} ${pick(DATA.lastNames)}`;
         },
 
+        funJobTitle() {
+            const prefix = Math.random() < 0.4 ? pick(DATA.jobTitlePrefixes) + ' ' : '';
+            return prefix + pick(DATA.jobTitleFunnyNouns) + ' ' + pick(DATA.jobTitleFunnyRoles);
+        },
+
         jobTitle() {
             const tier = Math.random();
-            if (tier < 0.05) {
-                // Funny: 5% — "[Noun] [Role]" e.g. "Rubber Duck Debugger"
-                return pick(DATA.jobTitleFunnyNouns) + ' ' + pick(DATA.jobTitleFunnyRoles);
-            }
             if (tier < 0.25) {
-                // Executive: 20%
+                // Executive: 25%
                 const r = Math.random();
                 if (r < 0.3)  return 'VP of ' + pick(DATA.jobTitleVPDepts);
                 if (r < 0.6)  return 'Director of ' + pick(DATA.jobTitleDirectorDepts);

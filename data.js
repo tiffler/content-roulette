@@ -279,57 +279,48 @@ const DATA = {
     'Detective', 'Tamer', 'Wrangler', 'Inspector', 'Whisperer', 'Debugger',
     'Overlord', 'Evangelist', 'Ninja', 'Watcher', 'Side Eyer', 'Wizard', 'Sensei',
     'Herder', 'Enthusiast', 'Connoisseur', 'Goblin', 'Gremlin', 'Oracle',
+    'Hoarder', 'Captain', 'Ranger', 'Gatekeeper', 'Consultant', 'Strategist',
+    'Auditor', 'Sleuth', 'Champion', 'Guardian', 'Alchemist', 'Shot Caller', 'Ringmaster',
+    'Cryptid', 'Seer', 'Trailblazer', 'Liaison', 'Lore Keeper', 'Agent', 'Menace'
   ],
 
   jobTitleFunnyNouns: [
     'Narwhal', 'Sock Puppet', 'Naptime', 'Snack', 'Rubber Duck',
     'Waffle', 'Dragon', 'Unicorn', 'Biscuit', 'Glitter', 'Bubble Wrap',
     'Printer', 'Spreadsheet', 'Hamster Wheel', 'Cat', 'Moonbeam', 'Thunderbolt',
-    'Meme', 'Emoji', 'Cereal', 'Existential Dread', 'Chaos', 'Synergy',
+    'Meme', 'Emoji', 'Cereal', 'Existential Dread', 'Chaos', 'Laser Beam',
+    'Pineapple', 'Cat Squad', 'Bubble Gum', 'Wombat', 'Sticky Note',
     'Office Plant', 'Time Travel', 'Left Shark', 'Wifi Password', 'Meeting',
     'Hover Board', 'Conspiracy Theory', 'Parking Spot', 'Pen Cap', 'Deadline',
-    'Paperclip', 'Llama', 'Pogo Stick', 'Bubble Tea', 'Koala'
+    'Paperclip', 'Llama', 'Pogo Stick', 'Bubble Tea', 'Koala', 'Mystery Box',
+    'Potato', 'Sandwich', 'Crystal Ball', 'Croissant', 'Disco', 'Puppy', 'Turtle',
+    'Ducky', 'Eggroll', 'Gummy Bear', 'Pixel', 'Tofu', 'Bobblehead', 'CAPTCHA',
+    'Spinning Wheel', 'Oxford Comma', 'Ancient Scroll', 'Sentient Roomba', 'Poral'
   ],
 
   jobTitleSuffixes: ['II', 'III'],
 
   jobTitleVPDepts: [
-    // Real
     'Engineering', 'Product', 'Marketing', 'Sales', 'Operations',
     'People & Culture', 'Data & Analytics', 'Design', 'Customer Success',
     'Finance', 'Legal', 'Security', 'Growth', 'Partnerships',
-    // Funny
-    'Snack Operations', 'Overthinking', 'Untangling Headphones',
-    'Making Things Look Busy', 'Left Sharking', 'Napping',
-    'Chaos Management', 'Vibes', 'Feelings',
   ],
 
   jobTitleDirectorDepts: [
-    // Real
     'Engineering', 'Product', 'Design', 'Marketing', 'Sales',
     'Customer Success', 'Data Engineering', 'Finance', 'Operations',
     'People & Culture', 'Security', 'Growth', 'Partnerships',
-    // Funny
-    'Cat Herding', 'Office Plants', 'Existential Crisis Management',
-    'Explaining Things Twice', 'Side Eyeing', 'Snack Procurement',
-    'Overthinking', 'Synergy', 'Vibes',
   ],
 
   jobTitleChiefTitles: [
-    // Real
     'Information Security Officer', 'Compliance Officer', 'Technology Officer',
     'Operating Officer', 'Financial Officer', 'Marketing Officer',
     'People Officer', 'Product Officer', 'Revenue Officer',
-    // Funny
-    'Wizard', 'Happiness Officer', 'Procrastination Officer',
-    'Nap Advisor', 'Fun Police', 'Microwave Timer Expert',
-    'Chaos Coordinator', 'Snack Officer', 'Vibe Curator',
   ],
 
   jobTitleExecutiveStandalone: [
     'Engineering Manager', 'Design Manager', 'Product Marketing Manager',
-    'General Counsel', 'Puppy Concierge', 'Professional Nap Taker',
-    'Sock Puppet Strategist', 'Alligator Wrestler',
+    'General Counsel',
   ],
 
   personalEmailDomains: [
@@ -351,11 +342,11 @@ const DATA = {
     'Apex', 'Global', 'Metro', 'Elite', 'Prime', 'Summit', 'Stellar', 'Ripple', 'Advanced', 'Strategic',
     'Premier', 'Progressive', 'Delta', 'Digital', 'Future', 'Smart', 'Quantum', 'Alpha', 'Omega',
     'Nexus', 'Catalyst', 'Pinnacle', 'Zenith', 'Vertex', 'Phoenix', 'Titan', 'Atlas', 'Vector',
-    'Capybara', 'Griffin', 'Mosaic', 'Flare', 'Echo', 'Synergy', 'Fusion', 'Velocity', 'Momentum',
+    'Capybara', 'Griffin', 'Mosaic', 'Flare', 'Echo', 'Fusion', 'Velocity', 'Momentum',
     'Paradigm', 'Infinity', 'Unity', 'Zen', 'Vantage', 'Horizon', 'Meridian', 'Crestwood', 'Ironclad',
     'Cobalt', 'Ember', 'Solace', 'Ardent', 'Cascade', 'Drift', 'Forge', 'Haven', 'Keystone', 'Lumen',
     'Luminary', 'Nova', 'Onyx', 'Orbit', 'Prism', 'Pulse', 'Radiant', 'Reverie', 'Sapphire', 'Shadow', 'Silver',
-    'Skyline', 'Solaris', 'Spectra', 'Stratus', 'Summit', 'Synergy', 'Tidal', 'Vortex', 'Zenith',
+    'Skyline', 'Solaris', 'Spectra', 'Stratus', 'Summit', 'Tidal', 'Vortex', 'Zenith',
     'Arc', 'Beacon', 'Crest', 'Eclipse', 'Frontier', 'Gateway', 'Harbor', 'Ignite',
     'Northgate', 'Obsidian', 'Paragon', 'Quorum', 'Redwood', 'Sandstone', 'Threshold',
     'Trilogy', 'Vanguard', 'Vertex', 'Vista', 'Wavelength', 'Windward',
