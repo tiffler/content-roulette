@@ -33,12 +33,9 @@
 
         funJobTitle() {
             const r = Math.random();
-            const core = r < 0.33
-                ? pick(DATA.jobTitleFunnyModifiers) + ' ' + pick(DATA.jobTitleFunnyRoles)
-                : r < 0.66
-                ? pick(DATA.jobTitleFunnyNouns) + ' ' + pick(DATA.jobTitleFunnyRoles)
-                : pick(DATA.jobTitleFunnyModifiers) + ' ' + pick(DATA.jobTitleFunnyNouns) + ' ' + pick(DATA.jobTitleFunnyRoles);
-            return core;
+            if (r < 0.33) return pick(DATA.jobTitleFunnyModifiers) + ' ' + pick(DATA.jobTitleFunnyNouns) + ' ' + pick(DATA.jobTitleFunnyRoles);
+            if (r < 0.66) return pick(DATA.jobTitleFunnyNouns) + ' ' + pick(DATA.jobTitleFunnyRoles);
+            return pick(DATA.jobTitlePrefixes) + ' ' + pick(DATA.jobTitleFunnyNouns) + ' ' + pick(DATA.jobTitleFunnyRoles);
         },
 
         jobTitle() {

@@ -277,7 +277,7 @@ const DATA = {
 
 
   jobTitleFunnyModifiers: [
-    'Haunted', 'Burnt Out', 'Dissociating', 'Deeply Exhausted', 'Emotionally Unavailable', 'Quietly Unraveling', 'Internally Screaming', 'Vaguely Traumatized', 'Suspicious', 'Dangerously Caffeinated', 'Chronically Overwhelmed', 'Barely Functional', 'Feral', 'Unhinged', 'Unbothered', 'Reluctant', 'Deprecated', 'Asynchronous', 'Glitchy', 'Buffering', 'Legacy', 'Blockchain-Adjacent', 'Agile', 'Scalable', 'Disruptive', 'Synergy-Driven', 'Vibes-Based', 'Ambient', 'Sentient', 'Main Character', 'Limited-Edition', 'NPC-Adjacent', 'Side Quest', 'Final Boss', 'Endgame', 'Delulu', 'Quantum', 'Virtual', 'Delusional', 'Caffeinated', 'Overstimulated', 'Hyperfocused', 'Sleep-Deprived', 'Skibidi', 'Vibing', 'Chonky', 'Confused', 'Panicking', 'Overthinking', 'Under-Caffeinated', 'Emotionally Exhausted', 'Existentially Dreaded', 'Perpetually Distracted', 'Mildly Anxious', 'Slightly Overqualified', 'Inexplicably Busy', 'Chronically Confused', 'Procrastinating', 'Daydreaming', 'Overworked', 'Hibernating', 'Overstimulated', 'Overperforming', 'Glitching', 'Mentally Exhausted', 'Silently Judgey', 'Spicy', 'Salty', 'Goofy', 'Quirky', 'Eccentric', 'Unstable', 'Chaotic', 'Mysterious', 'Enigmatic', 'Whimsical', 'Silly', 'Eccentric', 'Bored',
+    'Haunted', 'Burnt Out', 'Dissociating', 'Deeply Exhausted', 'Emotionally Unavailable', 'Quietly Unraveling', 'Internally Screaming', 'Vaguely Traumatized', 'Suspicious', 'Dangerously Caffeinated', 'Chronically Overwhelmed', 'Barely Functional', 'Feral', 'Unhinged', 'Unbothered', 'Reluctant', 'Deprecated', 'Asynchronous', 'Glitchy', 'Buffering', 'Legacy', 'Blockchain-Adjacent', 'Vibes-Based', 'Sentient', 'Main Character', 'Limited-Edition', 'NPC-Adjacent', 'Side Quest', 'Final Boss', 'Endgame', 'Delulu', 'Quantum', 'Virtual', 'Delusional', 'Caffeinated', 'Overstimulated', 'Hyperfocused', 'Sleep-Deprived', 'Skibidi', 'Vibing', 'Chonky', 'Confused', 'Panicking', 'Overthinking', 'Under-Caffeinated', 'Emotionally Exhausted', 'Perpetually Distracted', 'Mildly Anxious', 'Slightly Overqualified', 'Chronically Confused', 'Procrastinating', 'Daydreaming', 'Overworked', 'Hibernating', 'Overstimulated', 'Overperforming', 'Glitching', 'Mentally Exhausted', 'Silently Judgey', 'Spicy', 'Salty', 'Goofy', 'Quirky', 'Eccentric', 'Unstable', 'Chaotic', 'Mysterious', 'Enigmatic', 'Whimsical', 'Silly', 'Eccentric', 'Bored',
   ],
 
   jobTitleFunnyNouns: [
@@ -297,7 +297,7 @@ const DATA = {
     'Sparkle', 'Marshmallow', 'Confetti', 'Deflated Balloon', 'Yak', 'Meerkat', 'Garden Gnome',
     'Lava Lamp', 'Couch Cushion', 'Falafel', 'Squeegee', 'Tape Dispenser', 'Pencil Sharpener', 'Tumbleweed', 'Pinecone', 'Cactus', 'Tumbleweed', 'Seaweed', 'Sandcastle', 'Unicycle', 'Traffic Cone', 'Slingshot', 'Frisbee', 'Pinata',
     'Spaceship', 'Merge Conflict', '404 Error', 'Blue Screen of Death', 'Reboot', 'System Crash', 'Kernel Panic',
-    'Circus', 'Buffalo', 'Lint Roller', 'Cubicle', 'Water Cooler', 'Typewriter', 'Slide Deck', 'Clipboard', 'Elevator Pitch', 'Pinwheel'
+    'Circus', 'Buffalo', 'Lint Roller', 'Cubicle', 'Water Cooler', 'Typewriter', 'Slide Deck', 'Clipboard', 'Elevator Pitch', 'Pinwheel', 'This Meeting Could\'ve Been an Email', 'Syntax Error', 'Rubber Chicken'
   ],
 
     jobTitleFunnyRoles: [
@@ -374,9 +374,9 @@ const DATA = {
     'Nimbus', 'Gale', 'Sploot', 'Cloud', 'Willow', 'Clover', 'Neon',
     'Cactus', 'Flamingo', 'Otter', 'Penguin', 'Sloth', 'Llama', 'Axolotl',
     'Unicorn', 'Dragon', 'Mermaid', 'Centaur', 'Minotaur', 'Sphinx',
-    'Undead', 'Shamen', 'Hippogryph', 'Golem', 'Gargoyle', 'Spiral',
-    'Aquarius', 'Pisces', 'Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo', 'Libra', 'Scorpio', 'Sagittarius', 'Capricorn',
-    'Pegasus', 'Siren', 'Fairy', 'Kaleidoscope', 'Maven', 'Oracle', 'Sage', 'Seer', 
+    'Shamen', 'Hippogryph', 'Golem', 'Gargoyle', 'Spiral', 'SkyNet', 'CyberDyne',
+    'Aquarius', 'Pisces', 'Aries', 'Taurus', 'Gemini', 'Leo', 'Virgo', 'Libra', 'Scorpio', 'Sagittarius', 'Capricorn',
+    'Pegasus', 'Siren', 'Fairy', 'Kaleidoscope', 'Maven', 'Oracle', 'Sage', 'Seer', 'Krusty Krab',
     'Gryphon', 'Chimera', 'Hydra', 'Kraken', 'Leviathan', 'Basilisk', 'Wyvern', 'Cerberus',
     'Bigfoot', 'Fizzy', 'Triforce', 'Colossal', 'Meme', 'Chaos', 'Rubber Duck', 'Andromeda',
     'Jive', 'Zigzag', 'Doodle', 'Snicker', 'Gizmo', 'Hamburger', 'Sushi', 'Pizza', 'Dumpling',
@@ -386,9 +386,9 @@ const DATA = {
 
   organizationTypes: [
     'Inc.', 'LLC', 'Ltd.', 'Group', 'Ent', 'Solutions', 'Systems',
-    'Techs', 'Industries', 'Partners', 'Assoc.', 'Holdings', 'Ventures', 'Corp.',
+    'Techs', 'Industries', 'Partners', 'Associates', 'Holdings', 'Ventures', 'Corp.',
     'AI', 'Labs', 'Consulting', 'Services', 'Collective', 'Agency', 'Studio', 'Network', 'Capital',
-    '& Friends', 'Co.', 'Etc.', 'and Such', 'Unlimited'
+    '& Friends', 'Co.', '& Company', 'Etc.', 'and Such', 'Unlimited', 'Plus', 'and Partners', 'and Associates', 'Max', 'and More'
   ],
 
   appNameAdjectives: [
@@ -443,14 +443,14 @@ const DATA = {
     'Atlanta', 'Detroit', 'Minneapolis', 'St. Louis', 'Kansas City', 'Oklahoma City', 'Las Vegas',
     'San Diego', 'San Francisco', 'Los Angeles', 'Sacramento', 'Fresno', 'Bakersfield', 'Riverside',
     'Anaheim', 'Santa Ana', 'Stockton', 'Irvine', 'Fremont', 'San Jose', 'Long Beach',
-    'Virginia Beach', 'Norfolk', 'Chesapeake', 'Newport News', 'Alexandria', 'Hampton',
+    'Virginia Beach', 'Norfolk', 'Chesapeake', 'Newport Bay', 'Alexandria', 'Hampton',
     'Portsmouth', 'Suffolk', 'Lynchburg', 'Roanoke', 'Blacksburg', 'Harrisonburg', 'Winchester',
     'New York', 'Buffalo', 'Rochester', 'Syracuse', 'Albany', 'New Rochelle', 'Mount Vernon',
     'White Plains', 'Hempstead', 'Troy', 'Niagara Falls', 'Binghamton',
     'Mushroom Kingdom', 'Zootopia', 'San Fransokyo', 'Emerald City',
     'Lego City', 'Cantina', 'Narnia', 'Westeros', 'Hogwarts', 'Diagon Alley',
     'Mordor', 'Asgard', 'Funky Town', 'Gondor', 'Rohan',
-    'Mount. Olymppus', 'Camelot', 'Elysium', 'Mega City One', 'Cloud City', 'Bikini Bottom', 'Bedrock'
+    'Mt. Olympus', 'Camelot', 'Elysium', 'Mega City One', 'Cloud City', 'Bikini Bottom', 'Bedrock'
   ],
 
   states: [
