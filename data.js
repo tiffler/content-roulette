@@ -256,23 +256,23 @@ const DATA = {
     // Engineering
     'Software Engineer', 'Backend Engineer', 'Frontend Engineer', 'Full Stack Engineer',
     'DevOps Engineer', 'Site Reliability Engineer', 'Machine Learning Engineer',
-    'Data Engineer', 'Security Engineer', 'Platform Engineer', 'Mobile Engineer',
+    'Data Engineer', 'Security Engineer', 'Platform Engineer', 'Mobile Engineer', 'QA Engineer', 'Test Engineer', 'Embedded Systems Engineer', 'Firmware Engineer', 'Cloud Engineer', 'Infrastructure Engineer', 'Release Engineer', 'Build Engineer',
     // Design
     'Product Designer', 'UX Designer', 'UI Designer', 'Visual Designer',
-    'Brand Designer', 'Motion Designer', 'Design Systems Engineer', 'Graphic Designer',
+    'Brand Designer', 'Motion Designer', 'Design Systems Engineer', 'Graphic Designer', 'Illustrator', 'Game Designer', 'Experience Designer', 'Information Architect', 'Design Researcher',
     // Product & Analytics
     'Product Manager', 'Technical Product Manager', 'Data Analyst', 'Data Scientist',
-    'Business Intelligence Analyst', 'Analytics Engineer', 'Growth Analyst',
+    'Business Intelligence Analyst', 'Analytics Engineer', 'Growth Analyst', 'User Researcher', 'Market Research Analyst', 'Product Marketing Manager', 'Product Owner', 'Data Visualization Specialist', 'Quantitative Analyst', 'Data Strategist', 'Data Governance Specialist', 'Data Quality Analyst', 'Data Engineer', 'Data Architect',
     // Business & Ops
     'Business Analyst', 'Operations Manager', 'Project Manager', 'Program Manager',
     'Account Manager', 'Account Executive', 'Customer Success Manager',
-    'Marketing Manager', 'Content Strategist', 'Sales Representative',
+    'Marketing Manager', 'Content Strategist', 'Sales Representative', 'Sales Manager', 'Strategy Manager',
     // Finance & Legal
     'Financial Analyst', 'Accountant', 'Tax Specialist', 'Compliance Officer',
-    'Corporate Counsel', 'Legal Operations Manager',
+    'Corporate Counsel', 'Legal Operations Manager', 'Paralegal', 'Risk Manager', 'Auditor',
     // HR & IT
     'HR Generalist', 'Talent Acquisition Specialist', 'People Operations Manager',
-    'Systems Administrator', 'Network Engineer', 'IT Specialist', 'Cloud Architect',
+    'Systems Administrator', 'Network Engineer', 'IT Specialist', 'Cloud Architect', 'Technical Support Specialist', 'Help Desk Technician', 'IT Manager'
   ],
 
 
@@ -282,11 +282,11 @@ const DATA = {
 
   jobTitleFunnyNouns: [
     'Narwhal', 'Sock Puppet', 'Naptime', 'Snack', 'Rubber Duck',
-    'Waffle', 'Dragon', 'Unicorn', 'Biscuit', 'Glitter', 'Bubble Wrap',
+    'Waffle', 'Dragon', 'Unicorn', 'Glitter', 'Bubble Wrap',
     'Printer', 'Spreadsheet', 'Hamster Wheel', 'Cat', 'Moonbeam', 'Thunderbolt',
     'Meme', 'Emoji', 'Cereal', 'Existential Dread', 'Chaos', 'Laser Beam',
     'Pineapple', 'Cat Squad', 'Bubble Gum', 'Wombat', 'Sticky Note',
-    'Office Plant', 'Time Travel', 'Left Shark', 'Wifi Password', 'Meeting',
+    'Office Plant', 'Time Travel', 'Left Shark', 'Wifi Password', 'Pie Chart',
     'Hover Board', 'Conspiracy Theory', 'Parking Spot', 'Pen Cap', 'Deadline',
     'Paperclip', 'Llama', 'Pogo Stick', 'Bubble Tea', 'Koala', 'Mystery Box',
     'Potato', 'Sandwich', 'Crystal Ball', 'Croissant', 'Disco', 'Puppy', 'Turtle',
@@ -302,11 +302,10 @@ const DATA = {
 
     jobTitleFunnyRoles: [
     'Detective', 'Tamer', 'Wrangler', 'Inspector', 'Whisperer', 'Debugger',
-    'Overlord', 'Evangelist', 'Ninja', 'Watcher', 'Side Eyer', 'Wizard', 'Sensei',
-    'Herder', 'Enthusiast', 'Connoisseur', 'Goblin', 'Gremlin', 'Oracle',
-    'Hoarder', 'Captain', 'Ranger', 'Gatekeeper', 'Consultant', 'Strategist',
-    'Auditor', 'Sleuth', 'Champion', 'Guardian', 'Alchemist', 'Shot Caller', 'Ringmaster',
-    'Cryptid', 'Seer', 'Trailblazer', 'Liaison', 'Lore Keeper', 'Agent', 'Menace', 'Concierge', 'Provocateur', 'Ambassador', 'Sage', 'Enforcer', 'Overseer', 'Facilitator', 'Bamboozler', 'Mischief Maker', 'Puppet Master', 'Ringleader', 'Taskmaster', 'Trendsetter', 'Visionary', 'Vanguard', 'Warlord', 'Zealot', 'Rider', 'Gladiator', 'Summoner', 'Paladin', 'Bard', 'Navigator', 'Negotiator', 'Guide', 'Protector', 'Maverick', 'Disruptor', 'Luminary', 'Architect'
+    'Overlord', 'Evangelist', 'Ninja', 'Watcher', 'Side Eyer', 'Wizard', 'Sensei', 'Shade Thrower',
+    'Herder', 'Enthusiast', 'Connoisseur', 'Goblin', 'Gremlin', 'Oracle', 'Hoodlum', 'Bandit', 'Outlaw', 'Rebel',
+    'Hoarder', 'Captain', 'Ranger', 'Gatekeeper', 'Sleuth', 'Champion', 'Guardian', 'Alchemist', 'Cartographer', 'Ringmaster',
+    'Cryptid', 'Liaison', 'Lore Keeper', 'Secret Agent', 'Menace', 'Concierge', 'Provocateur', 'Ambassador', 'Sage', 'Enforcer', 'Overseer', 'Facilitator', 'Bamboozler', 'Mischief Maker', 'Puppet Master', 'Ringleader', 'Taskmaster', 'Trendsetter', 'Visionary', 'Vanguard', 'Warlord', 'Zealot', 'Rider', 'Gladiator', 'Summoner', 'Paladin', 'Bard', 'Navigator', 'Negotiator', 'Protector', 'Maverick', 'Disruptor', 'Luminary', 'Architect', 'Instigator', 'Guru', 'Maestro', 'Troublemaker', 'Stategist', 'Philosopher', 'Manager', 'Director', 'Officer', 'Agent', 'Specialist', 'Consultant', 'Coordinator', 'Administrator', 'Executive', 'Analyst', 'Developer', 'Engineer', 'Designer', 'Scientist', 'Representative', 'Advisor',
   ],
 
   jobTitleSuffixes: ['II', 'III'],
@@ -314,24 +313,30 @@ const DATA = {
   jobTitleVPDepts: [
     'Engineering', 'Product', 'Marketing', 'Sales', 'Operations',
     'People & Culture', 'Data & Analytics', 'Design', 'Customer Success',
-    'Finance', 'Legal', 'Security', 'Growth', 'Partnerships',
+    'Finance', 'Legal', 'Security', 'Growth', 'Partnerships', 'Retail', 'E-commerce', 'Supply Chain', 'Manufacturing', 'R&D', 'Innovation', 'Strategy', 'Corporate Development', 'Investor Relations', 'Communications', 'Public Relations', 'Government Affairs', 'Sustainability', 'Diversity & Inclusion', 'Employee Experience', 'Learning & Development', 'Internal Communications', 'Facilities', 'Procurement', 'Risk Management', 'Compliance', 'Quality Assurance', 'Customer Support', 'Technical Support', 'Business Development', 'Product Management', 'Project Management', 'Program Management', 'Data Science', 'Data Engineering', 'Data Analytics', 'Artificial Intelligence', 'Machine Learning', 'Cloud Computing', 'Cybersecurity', 'DevOps', 'Site Reliability', 'Mobile Development', 'Web Development', 'UX/UI Design', 'Graphic Design', 'Content Strategy', 'Social Media', 'Brand Management', 'Market Research', 'Sales Operations', 'Account Management', 'Customer Success Management', 'Financial Planning & Analysis', 'Accounting', 'Tax', 'Legal Operations', 'Corporate Counsel', 'Human Resources', 'Talent Acquisition', 'People Operations', 'IT', 'Systems Administration', 'Network Engineering', 'Cloud Architecture', 'Security Operations', 'Growth', 'Partnerships', 'Retail', 'E-commerce', 'Supply Chain', 'Manufacturing', 'R&D', 'Innovation', 'Strategy', 'Corporate Development', 'Investor Relations', 'Communications', 'Public Relations', 'Government Affairs', 'Sustainability', 'Diversity & Inclusion', 'Employee Experience', 'Learning & Development', 'Internal Communications', 'Facilities', 'Procurement', 'Risk Management', 'Compliance', 'Quality Assurance', 'Customer Support', 'Technical Support', 'Business Development', 'Product Management', 'Project Management', 'Program Management', 'Data Science', 'Data Engineering', 'Data Analytics', 'Artificial Intelligence', 'Machine Learning', 'Cloud Computing', 'Cybersecurity', 'DevOps', 'Site Reliability', 'Mobile Development', 'Web Development', 'UX/UI Design', 'Graphic Design', 'Content Strategy', 'Social Media', 'Brand Management', 'Market Research', 'Sales Operations', 'Account Management', 'Customer Success Management', 'Financial Planning & Analysis', 'Accounting', 'Tax', 'Legal Operations', 'Corporate Counsel', 'Human Resources', 'Talent Acquisition', 'People Operations', 'IT', 'Systems Administration', 'Network Engineering', 'Cloud Architecture', 'Security Operations', 'Partnerships',
   ],
 
   jobTitleDirectorDepts: [
     'Engineering', 'Product', 'Design', 'Marketing', 'Sales',
     'Customer Success', 'Data Engineering', 'Finance', 'Operations',
-    'People & Culture', 'Security', 'Growth', 'Partnerships',
+    'People & Culture', 'Security', 'Growth', 'Partnerships', 'R&D', 'Innovation', 'Strategy', 'Corporate Development', 'Investor Relations', 'Communications', 'Public Relations', 'Government Affairs','Diversity & Inclusion', 'Employee Experience', 'Learning & Development', 'Internal Communications', 'Facilities', 'Procurement', 'Risk Management', 'Compliance', 'Quality Assurance', 'Customer Support', 'Technical Support', 'Business Development', 'Product Management', 'Project Management', 'Program Management', 'Data Science', 'Data Analytics', 'Artificial Intelligence', 'Machine Learning', 'Cloud Computing', 'Cybersecurity', 'DevOps', 'Site Reliability Engineering (SRE)', 'Mobile Development', 'Web Development', 'UX/UI Design', 'Graphic Design', 'Content Strategy'
   ],
 
   jobTitleChiefTitles: [
     'Information Security Officer', 'Compliance Officer', 'Technology Officer',
     'Operating Officer', 'Financial Officer', 'Marketing Officer',
-    'People Officer', 'Product Officer', 'Revenue Officer',
+    'People Officer', 'Product Officer', 'Revenue Officer', 'Data Officer', 'Innovation Officer', 'Strategy Officer', 'Customer Officer', 'Business Development Officer', 'Legal Officer'
   ],
 
   jobTitleExecutiveStandalone: [
     'Engineering Manager', 'Design Manager', 'Product Marketing Manager',
-    'General Counsel',
+    'General Counsel', 'Chief of Staff', 'Head of Engineering', 'Head of Product', 'Head of Design',
+    'Head of Marketing', 'Head of Sales', 'Head of Operations', 'Head of People & Culture',
+    'Head of Data & Analytics', 'Head of Customer Success', 'Head of Finance', 'Head of Legal',
+    'Head of Security', 'Head of Growth', 'Head of Partnerships', 'Head of Retail', 'Head of E-commerce',
+    'Head of Supply Chain', 'Head of Manufacturing', 'Head of R&D', 'Head of Innovation',
+    'Head of Strategy', 'Head of Corporate Development', 'Head of Investor Relations',
+    'Head of Communications', 'Head of Public Relations'
   ],
 
   personalEmailDomains: [
@@ -344,7 +349,12 @@ const DATA = {
     'ironclad', 'cobalt', 'forgehq', 'horizongroup', 'summit', 'vertex', 'novadash',
     'pulsetech', 'fluxlabs', 'orbitco', 'prismsys', 'arccloud', 'luminary', 'onyxsolutions',
     'aeroinc', 'crestworks', 'keystoneio', 'upliftgroup', 'wavecrest', 'pathfinder',
-    'trailhead', 'redwoodtech', 'sandstone', 'threshold', 'daybreak', 'springboard'
+    'trailhead', 'redwoodtech', 'sandstone', 'threshold', 'daybreak', 'springboard', 'vanguard', 'vista', 'wavelength', 'windward', 'dynamic', 'synergy', 'ascend', 'overwatch', 'helix', 'sentinel', 'cipher', 'enigma', 'evolve', 'flux', 'noble', 'radiance',
+    'synapse', 'umbra', 'arcane', 'parallax', 'tempest', 'equinox', 'obelisk',
+    'aeon', 'aether', 'celestial', 'uplift', 'waterfall', 'crossroads',
+    'daybreak', 'frontline', 'greenfield', 'highpoint', 'landmark',
+    'overture', 'pathfinder', 'ridgeline', 'springboard', 'trailhead',
+    'wavecrest'
   ],
 
   workEmailTLDs: ['com', 'net', 'io', 'co', 'org', 'tech', 'ai', 'biz', 'app', 'dev'],

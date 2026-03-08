@@ -16,7 +16,6 @@ Generates realistic-looking mock data so your designs don't look like they were 
 - 💻 Device names, serial numbers, asset tags
 - 📦 Tracking numbers, IP addresses, MAC addresses
 - 📅 Dates, times, currency, percentages, credit cards
-- and the occasional **Narwhal Detective** job title if you're lucky
 
 ## Use it
 
