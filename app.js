@@ -58,8 +58,9 @@
         },
 
         personalEmails() {
-            const first = pick(DATA.firstNames).toLowerCase().replace(/[^a-z]/g, '');
-            const last  = pick(DATA.lastNames).toLowerCase().replace(/[^a-z]/g, '');
+            const norm  = s => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/đ/g, 'd').replace(/[^a-z]/g, '');
+            const first = norm(pick(DATA.firstNames));
+            const last  = norm(pick(DATA.lastNames));
             const sep   = Math.random() < 0.5 ? '.' : '';
             const numD  = Math.random() < 0.4 ? Math.floor(Math.random() * 4) + 1 : 0;
             const suf   = numD > 0 ? ('' + Math.floor(Math.random() * Math.pow(10, numD))).slice(0, numD).padStart(numD, '0') : '';
@@ -67,8 +68,9 @@
         },
 
         workEmails() {
-            const first  = pick(DATA.firstNames).toLowerCase().replace(/[^a-z]/g, '');
-            const last   = pick(DATA.lastNames).toLowerCase().replace(/[^a-z]/g, '');
+            const norm   = s => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/đ/g, 'd').replace(/[^a-z]/g, '');
+            const first  = norm(pick(DATA.firstNames));
+            const last   = norm(pick(DATA.lastNames));
             const domain = `${pick(DATA.workEmailDomainNames)}.${pick(DATA.workEmailTLDs)}`;
             const r = Math.random();
             const local = r < 0.4 ? `${first}.${last}` : r < 0.75 ? `${first}${last}` : `${first[0]}${last}`;
