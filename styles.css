@@ -94,7 +94,7 @@ p.subtitle { color: rgba(255,255,255,0.90); font-size: 1em; }
     top: 20px; right: 20px;
     background: rgba(255,255,255,0.2);
     border: none; color: white;
-    font-size: 1.4em; width: 48px; height: 48px;
+    font-size: 1.2em; width: 48px; height: 48px;
     border-radius: 50%; cursor: pointer;
     transition: all 0.3s ease;
     display: flex; align-items: center; justify-content: center;
@@ -108,18 +108,21 @@ p.subtitle { color: rgba(255,255,255,0.90); font-size: 1em; }
 }
 .figma-link {
     display: inline-flex; align-items: center; gap: 7px;
-    background: rgb(229, 229, 229);
-    color: #1a1a1a;
+    background: rgba(255,255,255,0.18);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1.5px solid rgba(255,255,255,0.3);
+    color: #fff;
     text-decoration: none;
     font-size: 0.8em;
     font-weight: 600;
-    padding: 8px 14px;
-    border-radius: 20px;
-    transition: all 0.3s ease;
+    padding: 8px 16px;
+    border-radius: 100px;
+    transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
     white-space: nowrap;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
-.figma-link:hover { background: #f0f0f0; transform: scale(1.05); box-shadow: 0 4px 12px rgba(0,0,0,0.25); }
+.figma-link:hover { background: rgba(255,255,255,0.28); transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,0.2); }
+.figma-link svg { display: block; height: 16px; width: auto; }
 @media (max-width: 480px) {
     .header-links { flex-direction: column; align-items: center; }
 }
@@ -182,7 +185,9 @@ p.subtitle { color: rgba(255,255,255,0.90); font-size: 1em; }
     letter-spacing: 0.08em; text-transform: uppercase;
     border-top: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
+    display: flex; align-items: center; gap: 8px;
 }
+.section-header i { font-size: 1.15em; line-height: 1; }
 
 /* ── Generator Cards ── */
 .generator-card {
@@ -195,7 +200,7 @@ p.subtitle { color: rgba(255,255,255,0.90); font-size: 1em; }
     color: var(--text-color); margin-bottom: 15px;
     display: flex; align-items: center; gap: 10px;
 }
-.card-icon { font-size: 1.4em; }
+.card-icon { font-size: 1.25em; line-height: 1; flex-shrink: 0; }
 .card-title small { font-size: 0.68em; font-weight: 400; opacity: 0.6; }
 
 .generate-btn {

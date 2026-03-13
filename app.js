@@ -4,13 +4,13 @@
         const saved = localStorage.getItem('theme') || 'dark';
         const btn   = document.getElementById('theme-toggle');
         document.documentElement.setAttribute('data-theme', saved);
-        btn.textContent = saved === 'dark' ? '☀️' : '🌙';
+        btn.innerHTML = saved === 'dark' ? '<i class="ph-bold ph-sun"></i>' : '<i class="ph-bold ph-moon"></i>';
         btn.addEventListener('click', () => {
             const cur  = document.documentElement.getAttribute('data-theme');
             const next = cur === 'dark' ? 'light' : 'dark';
             document.documentElement.setAttribute('data-theme', next);
             localStorage.setItem('theme', next);
-            btn.textContent = next === 'dark' ? '☀️' : '🌙';
+            btn.innerHTML = next === 'dark' ? '<i class="ph-bold ph-sun"></i>' : '<i class="ph-bold ph-moon"></i>';
         });
     }
     document.addEventListener('DOMContentLoaded', initTheme);
