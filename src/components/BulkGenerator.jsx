@@ -87,15 +87,18 @@ export default function BulkGenerator() {
   }
 
   return (
-    <div className="px-8 py-8 border-b-4" style={{ background: 'var(--bulk-bg)', borderColor: 'var(--border-color)' }}>
-      <div className="text-lg font-semibold mb-4 flex items-center gap-2.5" style={{ color: 'var(--text-color)' }}>
-        <ClipboardText size={22} className="flex-shrink-0" style={{ color: 'var(--text-color)' }} />
+    <div
+      className="px-8 py-8"
+      style={{ background: 'var(--panel)', borderBottom: '4px solid var(--border)', '--accent': 'var(--purple)' }}
+    >
+      <div className="text-xl font-extrabold mb-5 flex items-center gap-3 display" style={{ color: 'var(--ink)' }}>
+        <span className="icon-chip"><ClipboardText size={22} weight="bold" /></span>
         Bulk Generator
       </div>
 
       <div className="flex gap-4 items-center mb-5 flex-wrap">
         <select
-          className="bulk-select"
+          className="field bulk-select"
           value={type}
           onChange={e => setType(e.target.value)}
         >
@@ -115,43 +118,30 @@ export default function BulkGenerator() {
           min="1"
           max="100"
           placeholder="Count"
-          className="px-4 py-2.5 rounded-md text-base w-24"
-          style={{
-            border: '2px solid var(--border-light)',
-            background: 'var(--card-bg)',
-            color: 'var(--text-color)',
-          }}
+          className="field px-4 py-2.5 text-base w-24"
         />
 
-        <button
-          onClick={generateBulk}
-          className="px-6 py-2.5 rounded-lg text-base font-medium cursor-pointer transition-colors duration-200"
-          style={{ background: 'var(--btn-bg)', color: '#e8e0f5', border: 'none' }}
-          onMouseEnter={e => e.currentTarget.style.background = 'var(--btn-bg-hover)'}
-          onMouseLeave={e => e.currentTarget.style.background = 'var(--btn-bg)'}
-        >
+        <button onClick={generateBulk} className="btn-chunky px-6 py-3 text-base">
           Generate Bulk
         </button>
 
-        <button
-          onClick={copyBulk}
-          className="px-6 py-2.5 rounded-lg text-base font-medium cursor-pointer transition-colors duration-200 bg-green-600 hover:bg-green-700 text-white border-none"
-        >
+        <button onClick={copyBulk} className="btn-chunky px-6 py-3 text-base" style={{ '--accent': 'var(--lime)' }}>
           Copy All
         </button>
       </div>
 
       <div
-        className={`bulk-output px-5 py-5 rounded-lg font-mono text-base min-h-[150px] max-h-[300px] border-2 border-dashed ${copied ? 'border-emerald-500' : ''}`}
-        style={{
-          background: copied ? 'var(--output-success-bg)' : 'var(--input-field-bg)',
-          borderColor: copied ? 'var(--output-success-border)' : 'var(--border-color)',
-          color: copied ? 'var(--output-success-text)' : 'var(--text-secondary)',
-        }}
+        className={`bulk-output output-box px-5 py-5 text-base min-h-[150px] max-h-[300px] ${output ? 'has-value' : ''} ${copied ? 'copied' : ''}`}
         onClick={copyBulk}
       >
         {output || 'Select a type and count, then click Generate Bulk'}
       </div>
+
+      {output && (
+        <div className={`copy-hint ${copied ? 'done' : ''}`}>
+          {copied ? '✓ Copied all!' : 'Click box to copy all'}
+        </div>
+      )}
     </div>
   )
 }

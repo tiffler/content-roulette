@@ -16,7 +16,13 @@ export default function App() {
   }
 
   return (
-    <div className="max-w-[1200px] mx-auto rounded-2xl overflow-hidden shadow-[0_20px_40px_rgba(0,0,0,0.1)]" style={{ background: 'var(--card-bg)' }}>
+    <div
+      className="max-w-[1160px] mx-auto rounded-[26px] overflow-hidden"
+      style={{
+        background: 'var(--bg)',
+        border: '4px solid var(--border)',
+      }}
+    >
       <Header theme={theme} onToggleTheme={toggleTheme} />
       <BulkGenerator />
       <GeneratorGrid />

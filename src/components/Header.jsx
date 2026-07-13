@@ -18,45 +18,58 @@ const FIGMA_SVG = (
 
 export default function Header({ theme, onToggleTheme }) {
   return (
-    <div className="text-center px-8 py-8 relative" style={{ background: 'var(--header-bg)' }}>
+    <div
+      className="text-center px-8 pt-10 pb-9 relative overflow-hidden"
+      style={{
+        background: 'var(--purple-deep)',
+        borderBottom: '4px solid var(--border)',
+        backgroundImage:
+          'radial-gradient(rgba(255,255,255,0.10) 2px, transparent 2px)',
+        backgroundSize: '26px 26px',
+      }}
+    >
       <button
         onClick={onToggleTheme}
         title="Toggle dark mode"
-        className="absolute top-5 right-5 w-12 h-12 rounded-full border-none text-white text-xl cursor-pointer flex items-center justify-center transition-all duration-300 hover:scale-110"
-        style={{ background: 'rgba(255,255,255,0.2)' }}
-        onMouseEnter={e => e.currentTarget.style.background = 'rgba(255,255,255,0.3)'}
-        onMouseLeave={e => e.currentTarget.style.background = 'rgba(255,255,255,0.2)'}
+        aria-label="Toggle dark mode"
+        className="hdr-btn absolute top-5 right-5 w-12 h-12 rounded-xl cursor-pointer flex items-center justify-center text-[#171717] text-xl"
+        style={{ background: theme === 'dark' ? '#FCC717' : '#FBF3DE' }}
       >
-        {theme === 'dark' ? <Sun weight="bold" /> : <Moon weight="bold" />}
+        {theme === 'dark' ? <Sun weight="fill" /> : <Moon weight="fill" />}
       </button>
 
-      <h1 className="text-4xl font-light mb-2 text-white flex items-center justify-center gap-3">
-        <DiceThree weight="bold" /> Content Roulette
+      <h1
+        className="display text-5xl sm:text-6xl font-extrabold mb-3 text-[#FBF3DE] flex items-center justify-center gap-3 leading-none"
+        style={{ textShadow: '3px 3px 0 #171717' }}
+      >
+        <span
+          className="inline-flex items-center justify-center w-14 h-14 rounded-2xl text-[#171717]"
+          style={{ background: '#FCC717', border: '3px solid #171717' }}
+        >
+          <DiceThree weight="fill" />
+        </span>
+        Content Roulette
       </h1>
 
-      <div className="flex flex-wrap justify-center gap-x-5 mt-1">
-        <p className="text-white/90 text-base">Stop Lorem'ing your Ipsum</p>
-        <p className="text-white/90 text-base">Randomly generate realistic mock data</p>
-      </div>
+      <p className="display text-lg font-bold text-[#FBF3DE] mb-3">Stop Lorem'ing your Ipsum</p>
 
-      <p className="text-white/75 text-sm mt-1.5">
-        Built by{' '}
-        <a href="https://www.tienmedia.com" target="_blank" rel="noopener" className="text-white/75 underline underline-offset-2 hover:text-white">
+      <p className="text-[#FBF3DE]/90 text-[14pt] font-bold mb-5">
+        Randomly generate realistic mock data ·{' '}
+        <a href="https://www.tienmedia.com" target="_blank" rel="noopener" className="underline underline-offset-2 hover:text-white">
           tiffler
         </a>
-        {' '}and her AI sidekick{' '}
-        <a href="https://claude.com/product/claude-code" target="_blank" rel="noopener" className="text-white/75 underline underline-offset-2 hover:text-white">
+        {' '}&amp; her AI sidekick{' '}
+        <a href="https://claude.com/product/claude-code" target="_blank" rel="noopener" className="underline underline-offset-2 hover:text-white">
           SYNT4X
         </a>
       </p>
 
-      <div className="flex flex-wrap gap-2.5 justify-center mt-4">
+      <div className="flex flex-wrap gap-3 justify-center">
         <a
           href="https://github.com/tiffler/content-roulette"
           target="_blank"
           rel="noopener"
-          className="inline-flex items-center gap-1.5 text-white no-underline text-xs font-semibold px-4 py-2 rounded-full transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg whitespace-nowrap"
-          style={{ background: 'rgba(255,255,255,0.18)', backdropFilter: 'blur(10px)', border: '1.5px solid rgba(255,255,255,0.3)' }}
+          className="hdr-pill display inline-flex items-center gap-1.5 no-underline text-sm font-extrabold px-4 py-2 whitespace-nowrap"
         >
           {GITHUB_SVG} View on GitHub
         </a>
@@ -64,8 +77,7 @@ export default function Header({ theme, onToggleTheme }) {
           href="https://www.figma.com/community/plugin/1603319090043870718/content-roulette"
           target="_blank"
           rel="noopener"
-          className="inline-flex items-center gap-1.5 text-white no-underline text-xs font-semibold px-4 py-2 rounded-full transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg whitespace-nowrap"
-          style={{ background: 'rgba(255,255,255,0.18)', backdropFilter: 'blur(10px)', border: '1.5px solid rgba(255,255,255,0.3)' }}
+          className="hdr-pill display inline-flex items-center gap-1.5 no-underline text-sm font-extrabold px-4 py-2 whitespace-nowrap"
         >
           {FIGMA_SVG} Try the Figma plugin
         </a>

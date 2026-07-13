@@ -2,118 +2,251 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ── Theme Variables ── */
+/* ══════════════════════════════════════════════════════════
+   Content Roulette — "Bold Sticker Arcade" theme
+   Thick black die-cut outlines, hard offset shadows,
+   cream ground (light) / near-black (dark), candy palette.
+   ══════════════════════════════════════════════════════════ */
+
 :root {
-    --bg-color: #f3eeff;
-    --card-bg: #ffffff;
-    --input-field-bg: #ede5ff;
-    --text-color: #2d1f4e;
-    --text-secondary: #4a3470;
-    --text-muted: #7c6da8;
-    --border-color: #ddd0f7;
-    --border-light: #e8dcff;
-    --header-bg: linear-gradient(135deg, #6d28d9 0%, #a855f7 55%, #ec4899 100%);
-    --header-hover: #5b21b6;
-    --bulk-bg: #faf7ff;
-    --btn-bg: #4a3178;
-    --btn-bg-hover: #3d2767;
-    --output-bg: #f8f4ff;
-    --output-success-bg: #ecfdf5;
-    --output-success-border: #10b981;
-    --output-success-text: #065f46;
-    --section-header-bg: #ede5ff;
-    --section-header-text: #6d28d9;
-    --shadow: rgba(109,40,217,0.12);
+    /* Candy accent palette (fixed across both themes) */
+    /* --purple is lightened so black text clears 4.5:1 (5.5:1) */
+    --purple: #9E77EE;
+    --purple-deep: #6C2BD9;
+    --cyan: #38C6EC;
+    --blue: #6581F7;
+    --orange: #FB7E51;
+    --yellow: #FCC717;
+    --lime: #7CE43F;
+    --green: #2BAA5E;
+    --pink: #FE7EDD;
+    --red: #E24C3D;
+
+    /* Per-card accent (overridden inline by each section) */
+    --accent: var(--purple);
+
+    /* Surfaces & ink — LIGHT */
+    --bg: #FDF7E4;
+    --panel: #FFF3D4;
+    --card: #FFFFFF;
+    --field: #FDF7E4;
+    --ink: #171717;
+    --ink-soft: #574f47;
+    --border: #171717;
+    --shadow-col: #171717;
+
+    /* Output states */
+    --output-bg: #FDF7E4;
+    --output-ink: #574f47;
+    --success-bg: #CFF6DD;
+    --success-ink: #0f5a30;
+
+    /* Hard offset shadows (no blur) */
+    --sh-sm: 3px 3px 0 var(--shadow-col);
+    --sh: 5px 5px 0 var(--shadow-col);
+    --sh-lg: 8px 8px 0 var(--shadow-col);
+
+    --font-display: 'Baloo 2', system-ui, sans-serif;
+    --font-body: 'Nunito', system-ui, -apple-system, sans-serif;
+    --font-mono: 'Space Mono', ui-monospace, 'SFMono-Regular', monospace;
 }
 
 [data-theme="dark"] {
-    --bg-color: #0e0b18;
-    --card-bg: #18122e;
-    --input-field-bg: #251d3d;
-    --text-color: #ede9ff;
-    --text-secondary: #c4b5fd;
-    --text-muted: #8b7dc8;
-    --border-color: #3b2f6e;
-    --border-light: #4e3f87;
-    --header-bg: linear-gradient(135deg, #3b0764 0%, #6d28d9 55%, #9d174d 100%);
-    --header-hover: #4c1d95;
-    --bulk-bg: #130f22;
-    --btn-bg: #6b50a8;
-    --btn-bg-hover: #5c4498;
-    --output-bg: #1e1638;
-    --output-success-bg: #052e1c;
-    --output-success-border: #10b981;
-    --output-success-text: #6ee7b7;
-    --section-header-bg: #0f0a1e;
-    --section-header-text: #a78bfa;
-    --shadow: rgba(0,0,0,0.4);
+    --bg: #161314;
+    --panel: #201b1d;
+    --card: #272122;
+    --field: #1c1819;
+    --ink: #FBF3DE;
+    --ink-soft: #b3a99a;
+    --border: #FBF3DE;
+    /* In dark mode the hard shadow glows in the card's accent color */
+    --shadow-col: var(--accent);
+
+    --output-bg: #1c1819;
+    --output-ink: #b3a99a;
+    --success-bg: #103a25;
+    --success-ink: #8ff0b7;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { overflow-x: hidden; }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    background: var(--bg-color);
+    font-family: var(--font-body);
+    font-weight: 600;
+    background: var(--bg);
+    color: var(--ink);
     min-height: 100vh;
-    padding: 20px;
+    padding: 28px 20px 48px;
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    background-image:
+        radial-gradient(var(--dots, rgba(23,23,23,0.06)) 1.4px, transparent 1.4px);
+    background-size: 22px 22px;
 }
+[data-theme="dark"] body { --dots: rgba(251,243,222,0.05); }
 
 @media (max-width: 480px) {
-    body { padding: 10px; }
+    body { padding: 14px 10px 32px; }
 }
 
-/* ── Generator Grid ── */
+/* ── Reusable "sticker" surface — bold border, no resting shadow ── */
+.sticker {
+    background: var(--card);
+    border: 3px solid var(--border);
+    border-radius: 18px;
+}
+
+/* ── Chunky arcade button — flat at rest, pops out on hover, presses in on click ── */
+.btn-chunky {
+    font-family: var(--font-display);
+    font-weight: 800;
+    letter-spacing: 0.2px;
+    color: #171717;
+    background: var(--accent);
+    border: 3px solid var(--border);
+    border-radius: 14px;
+    box-shadow: none;
+    cursor: pointer;
+    transition: transform 0.08s ease, box-shadow 0.08s ease, filter 0.15s ease;
+}
+.btn-chunky:hover { transform: translate(-2px, -2px); box-shadow: 4px 4px 0 var(--border); filter: brightness(1.04); }
+.btn-chunky:active { transform: translate(1px, 1px); box-shadow: 1px 1px 0 var(--border); }
+[data-theme="dark"] .btn-chunky { color: #171717; }
+
+/* ── Accent icon chip — border only ── */
+.icon-chip {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    color: #171717;
+    background: var(--accent);
+    border: 3px solid var(--border);
+    border-radius: 11px;
+}
+
+/* ── Generator grid ── */
 .generator-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
-    gap: 0;
+    grid-template-columns: repeat(auto-fill, minmax(min(270px, 100%), 1fr));
+    gap: 18px;
+    padding: 24px;
+    background: var(--bg);
 }
+@media (max-width: 480px) { .generator-grid { padding: 16px; gap: 14px; } }
 
-/* ── Bulk Select ── */
+/* ── Section header bar ── */
+.section-bar {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 18px;
+    margin-top: 6px;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 0.95rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #171717;
+    background: var(--accent);
+    border: 3px solid var(--border);
+    border-radius: 13px;
+}
+.section-bar:first-child { margin-top: 0; }
+
+/* ── Form fields ── */
+.field {
+    font-family: var(--font-body);
+    font-weight: 700;
+    color: var(--ink);
+    background: var(--field);
+    border: 3px solid var(--border);
+    border-radius: 12px;
+}
+.field:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent); }
+
+/* ── Bulk select dropdown ── */
 .bulk-select {
-    padding: 10px 35px 10px 15px;
-    border: 2px solid var(--border-light);
-    border-radius: 6px;
-    font-size: 1em;
-    background-color: var(--card-bg);
-    color: var(--text-color);
+    padding: 11px 38px 11px 16px;
+    font-size: 1rem;
     appearance: none;
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232c3e50' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+    cursor: pointer;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23171717' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
     background-repeat: no-repeat;
-    background-position: right 10px center;
+    background-position: right 12px center;
     background-size: 18px;
 }
-
 [data-theme="dark"] .bulk-select {
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23e2e8f0' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FBF3DE' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
 }
-
 .bulk-select optgroup {
-    color: #2d1f4e;
+    font-family: var(--font-body);
+    color: #171717;
+    font-weight: 800;
+    background: #FFF3D4;
+}
+[data-theme="dark"] .bulk-select optgroup { color: #FBF3DE; background: #272122; }
+.bulk-select option { font-weight: 600; }
+
+/* ── Output boxes ── */
+.output-box {
+    font-family: var(--font-mono);
+    background: var(--output-bg);
+    color: var(--output-ink);
+    border: 3px dashed var(--border);
+    border-radius: 13px;
+    transition: background 0.15s, color 0.15s, box-shadow 0.15s, border-color 0.15s;
+}
+.output-box.has-value {
+    border-style: solid;
+    color: var(--ink);
+}
+.output-box.copied {
+    border-style: solid;
+    background: var(--success-bg);
+    color: var(--success-ink);
+    border-color: var(--green);
+}
+
+.bulk-output { white-space: pre-line; overflow-y: auto; cursor: pointer; }
+
+/* ── Copy hint / notice (under a generated box) ── */
+.copy-hint {
+    font-family: var(--font-body);
     font-weight: 700;
-    background: #ede5ff;
+    font-size: 0.78rem;
+    color: var(--ink-soft);
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.copy-hint.done {
+    font-family: var(--font-display);
+    font-weight: 800;
+    color: var(--green);
 }
 
-[data-theme="dark"] .bulk-select optgroup {
-    color: #e8e0f5;
-    background: #251d3d;
-}
+.display { font-family: var(--font-display); }
 
-/* ── Output transition ── */
-.copy-notice {
-    font-size: 0.8em;
-    color: var(--text-muted);
-    margin-top: 5px;
-    opacity: 0;
-    transition: opacity 0.3s;
+/* ── Header controls (on purple → always black border/shadow) ── */
+.hdr-pill {
+    background: #FBF3DE;
+    color: #171717;
+    border: 2.5px solid #171717;
+    border-radius: 14px;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
 }
-.copy-notice.show { opacity: 1; }
+.hdr-pill:hover { transform: translate(-2px, -2px); box-shadow: 3px 3px 0 #171717; }
+.hdr-pill:active { transform: translate(1px, 1px); box-shadow: 1px 1px 0 #171717; }
 
-.bulk-output {
-    white-space: pre-line;
-    overflow-y: auto;
-    cursor: pointer;
-    transition: background 0.2s;
+.hdr-btn {
+    border: 3px solid #171717;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
 }
+.hdr-btn:hover { transform: translate(-2px, -2px); box-shadow: 3px 3px 0 #171717; }
+.hdr-btn:active { transform: translate(1px, 1px); box-shadow: 1px 1px 0 #171717; }

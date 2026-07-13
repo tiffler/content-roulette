@@ -15,7 +15,8 @@ const SECTIONS = [
   {
     id: 'people',
     label: 'People & Contact',
-    icon: <Users size={ICON_SIZE} />,
+    accent: 'var(--purple)',
+    icon: <Users size={ICON_SIZE} weight="bold" />,
     cards: [
       { type: 'names', title: 'Full Name', icon: <User size={ICON_SIZE} />, label: 'Generate Name' },
       { type: 'jobTitle', title: 'Job Title', icon: <Briefcase size={ICON_SIZE} />, label: 'Generate Job Title' },
@@ -30,7 +31,8 @@ const SECTIONS = [
   {
     id: 'business',
     label: 'Business & Apps',
-    icon: <Buildings size={ICON_SIZE} />,
+    accent: 'var(--cyan)',
+    icon: <Buildings size={ICON_SIZE} weight="bold" />,
     cards: [
       { type: 'organizations', title: 'Organization Name', icon: <Buildings size={ICON_SIZE} />, label: 'Generate Org Name' },
       { type: 'apps', title: 'App Name', icon: <AppWindow size={ICON_SIZE} />, label: 'Generate App Name' },
@@ -41,7 +43,8 @@ const SECTIONS = [
   {
     id: 'assets',
     label: 'Laptops & Assets',
-    icon: <Laptop size={ICON_SIZE} />,
+    accent: 'var(--orange)',
+    icon: <Laptop size={ICON_SIZE} weight="bold" />,
     cards: [
       { type: 'mac', title: 'Mac Device', icon: <Laptop size={ICON_SIZE} />, label: 'Generate Mac' },
       { type: 'windows', title: 'Windows Device', icon: <Desktop size={ICON_SIZE} />, label: 'Generate Windows' },
@@ -54,7 +57,8 @@ const SECTIONS = [
   {
     id: 'dates',
     label: 'Dates & Times',
-    icon: <Calendar size={ICON_SIZE} />,
+    accent: 'var(--green)',
+    icon: <Calendar size={ICON_SIZE} weight="bold" />,
     cards: [
       { type: 'shortDate', title: 'Short Date', subtitle: 'MM/DD/YYYY', icon: <CalendarBlank size={ICON_SIZE} />, label: 'Generate Date' },
       { type: 'shortYearDate', title: 'Short Year Date', subtitle: 'MM/DD/YY', icon: <Calendar size={ICON_SIZE} />, label: 'Generate Date' },
@@ -66,7 +70,8 @@ const SECTIONS = [
   {
     id: 'payment',
     label: 'Payment & Numbers',
-    icon: <CreditCard size={ICON_SIZE} />,
+    accent: 'var(--yellow)',
+    icon: <CreditCard size={ICON_SIZE} weight="bold" />,
     cards: [
       { type: 'creditCard', title: 'Credit Card', icon: <CreditCard size={ICON_SIZE} />, label: 'Generate Card #' },
       { type: 'currency', title: 'Currency ($USD)', icon: <CurrencyDollar size={ICON_SIZE} />, label: 'Generate Amount' },
@@ -76,7 +81,8 @@ const SECTIONS = [
   {
     id: 'network',
     label: 'Network',
-    icon: <Globe size={ICON_SIZE} />,
+    accent: 'var(--pink)',
+    icon: <Globe size={ICON_SIZE} weight="bold" />,
     cards: [
       { type: 'ipv4', title: 'IPv4 Address', icon: <Globe size={ICON_SIZE} />, label: 'Generate IPv4' },
       { type: 'ipv6', title: 'IPv6 Address', icon: <GlobeSimple size={ICON_SIZE} />, label: 'Generate IPv6' },
@@ -90,20 +96,12 @@ export default function GeneratorGrid() {
     <div className="generator-grid">
       {SECTIONS.map(section => (
         <React.Fragment key={section.id}>
-          <div
-            className="col-span-full flex items-center gap-2 px-6 py-3 text-xs font-bold tracking-widest uppercase border-t border-b"
-            style={{
-              gridColumn: '1 / -1',
-              background: 'var(--section-header-bg)',
-              color: 'var(--section-header-text)',
-              borderColor: 'var(--border-color)',
-            }}
-          >
+          <div className="section-bar" style={{ '--accent': section.accent }}>
             {section.icon}
             {section.label}
           </div>
           {section.cards.map(card => (
-            <GeneratorCard key={card.type} {...card} />
+            <GeneratorCard key={card.type} accent={section.accent} {...card} />
           ))}
         </React.Fragment>
       ))}
