@@ -2,7 +2,7 @@
 // All data sourced from the Figma plugin (code.ts)
 // Used by index.html as a global DATA object
 
-const DATA = {
+export const DATA = {
   firstNames: [
     // East Asian (Chinese, Japanese, Korean)
     "Aki",

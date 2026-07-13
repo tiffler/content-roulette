@@ -2,7 +2,7 @@
 
 **Stop Lorem'ing your Ipsum.**
 
-A mock data generator for anyone who's tired of testing with "Jane Doe" and fake@email.com. Built as a web app and a [Figma plugin](https://www.figma.com/community/plugin/1603319090043870718/content-roulette), because I got tired of copy-pasting like it's 2012.
+A mock data generator for anyone who's tired of testing with "Jane Doe" and fake@email.com. Built as a [web app](https://tiffler.github.io/content-roulette/) and a [Figma plugin](https://www.figma.com/community/plugin/1603319090043870718/content-roulette), because I got tired of copy-pasting like it's 2012.
 
 ---
 
@@ -31,4 +31,4 @@ Simple HTML, CSS, vanilla JS.
 
 ---
 
-*Built by a [tiffler](https://www.tienmedia.com) and her AI sidekick [SYNT4X](https://claude.com/product/claude-code)*
+_Built by a [tiffler](https://www.tienmedia.com) and her AI sidekick [SYNT4X](https://claude.com/product/claude-code)_
