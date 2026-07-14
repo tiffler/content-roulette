@@ -31,4 +31,4 @@ Simple HTML, CSS, vanilla JS.
 
 ---
 
-_Built by a [tiffler](https://www.tienmedia.com) and her AI sidekick [SYNT4X](https://claude.com/product/claude-code)_
+_Built by [tiffler](https://www.tienmedia.com) and her AI sidekick [Clawde](https://claude.com/product/claude-code)_
