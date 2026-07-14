@@ -22,7 +22,7 @@ export default function Header({ theme, onToggleTheme }) {
       className="text-center px-8 pt-10 pb-9 relative overflow-hidden"
       style={{
         background: 'var(--purple-deep)',
-        borderBottom: '4px solid var(--border)',
+        borderBottom: '1px solid var(--border)',
         backgroundImage:
           'radial-gradient(rgba(255,255,255,0.10) 2px, transparent 2px)',
         backgroundSize: '26px 26px',
@@ -44,7 +44,7 @@ export default function Header({ theme, onToggleTheme }) {
       >
         <span
           className="inline-flex items-center justify-center w-14 h-14 rounded-2xl text-[#171717]"
-          style={{ background: '#FCC717', border: '3px solid #171717' }}
+          style={{ background: '#FCC717', border: '1px solid #171717' }}
         >
           <DiceThree weight="fill" />
         </span>

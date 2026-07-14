@@ -89,7 +89,7 @@ export default function BulkGenerator() {
   return (
     <div
       className="px-8 py-8"
-      style={{ background: 'var(--panel)', borderBottom: '4px solid var(--border)', '--accent': 'var(--purple)' }}
+      style={{ background: 'var(--panel)', borderBottom: '1px solid var(--border)', '--accent': 'var(--purple)' }}
     >
       <div className="text-xl font-extrabold mb-5 flex items-center gap-3 display" style={{ color: 'var(--ink)' }}>
         <span className="icon-chip"><ClipboardText size={22} weight="bold" /></span>

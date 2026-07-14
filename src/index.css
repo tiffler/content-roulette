@@ -93,7 +93,7 @@ body {
 /* ── Reusable "sticker" surface — bold border, no resting shadow ── */
 .sticker {
     background: var(--card);
-    border: 3px solid var(--border);
+    border: 1px solid var(--border);
     border-radius: 18px;
 }
 
@@ -124,7 +124,7 @@ body {
     height: 40px;
     color: #171717;
     background: var(--accent);
-    border: 3px solid var(--border);
+    border: 1px solid var(--border);
     border-radius: 11px;
 }
 
@@ -153,7 +153,7 @@ body {
     text-transform: uppercase;
     color: #171717;
     background: var(--accent);
-    border: 3px solid var(--border);
+    border: 1px solid var(--border);
     border-radius: 13px;
 }
 .section-bar:first-child { margin-top: 0; }
@@ -164,7 +164,7 @@ body {
     font-weight: 700;
     color: var(--ink);
     background: var(--field);
-    border: 3px solid var(--border);
+    border: 1px solid var(--border);
     border-radius: 12px;
 }
 .field:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent); }
@@ -197,7 +197,7 @@ body {
     font-family: var(--font-mono);
     background: var(--output-bg);
     color: var(--output-ink);
-    border: 3px dashed var(--border);
+    border: 1px dashed var(--border);
     border-radius: 13px;
     transition: background 0.15s, color 0.15s, box-shadow 0.15s, border-color 0.15s;
 }
@@ -237,7 +237,7 @@ body {
 .hdr-pill {
     background: #FBF3DE;
     color: #171717;
-    border: 2.5px solid #171717;
+    border: 1px solid #171717;
     border-radius: 14px;
     transition: transform 0.1s ease, box-shadow 0.1s ease;
 }
@@ -245,7 +245,7 @@ body {
 .hdr-pill:active { transform: translate(1px, 1px); box-shadow: 1px 1px 0 #171717; }
 
 .hdr-btn {
-    border: 3px solid #171717;
+    border: 1px solid #171717;
     transition: transform 0.1s ease, box-shadow 0.1s ease;
 }
 .hdr-btn:hover { transform: translate(-2px, -2px); box-shadow: 3px 3px 0 #171717; }
