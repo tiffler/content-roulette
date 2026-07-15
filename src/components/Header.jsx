@@ -60,7 +60,7 @@ export default function Header({ theme, onToggleTheme }) {
         </a>
         {' '}&amp; her AI sidekick{' '}
         <a href="https://claude.com/product/claude-code" target="_blank" rel="noopener" className="underline underline-offset-2 hover:text-white">
-          SYNT4X
+          Clawde
         </a>
       </p>
 
