@@ -44,7 +44,7 @@ export default function Header({ theme, onToggleTheme }) {
       >
         <span
           className="inline-flex items-center justify-center w-14 h-14 rounded-2xl text-[#171717]"
-          style={{ background: '#FCC717', border: '1px solid #171717' }}
+          style={{ background: '#FCC717', border: '2px solid #171717' }}
         >
           <DiceThree weight="fill" />
         </span>
@@ -54,7 +54,7 @@ export default function Header({ theme, onToggleTheme }) {
       <p className="display text-lg font-bold text-[#FBF3DE] mb-3">Stop Lorem'ing your Ipsum</p>
 
       <p className="text-[#FBF3DE]/90 text-[14pt] font-bold mb-5">
-        Randomly generate realistic mock data ·{' '}
+        Randomly generate realistic mock data · Built by{' '}
         <a href="https://www.tienmedia.com" target="_blank" rel="noopener" className="underline underline-offset-2 hover:text-white">
           tiffler
         </a>

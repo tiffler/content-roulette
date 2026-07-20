@@ -1,2 +1,6 @@
 node_modules
+# node_modules is a symlink to this; the .nosync suffix keeps iCloud Drive
+# from syncing ~12k dependency files, which otherwise starves file I/O.
+node_modules.nosync
 dist
+.DS_Store
