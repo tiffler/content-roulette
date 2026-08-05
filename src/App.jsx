@@ -17,11 +17,8 @@ export default function App() {
 
   return (
     <div
-      className="max-w-[1160px] mx-auto rounded-[26px] overflow-hidden"
-      style={{
-        background: 'var(--bg)',
-        border: '4px solid var(--border)',
-      }}
+      className="w-full"
+      style={{ background: 'var(--bg)' }}
     >
       <Header theme={theme} onToggleTheme={toggleTheme} />
       <BulkGenerator />
