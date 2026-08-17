@@ -7,6 +7,57 @@ function randAlpha(n) {
   const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
   return Array.from({ length: n }, () => chars[Math.floor(Math.random() * chars.length)]).join('')
 }
+function randLetters(n) {
+  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+  return Array.from({ length: n }, () => chars[Math.floor(Math.random() * chars.length)]).join('')
+}
+function randMixed(n) {
+  const chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
+  return Array.from({ length: n }, () => chars[Math.floor(Math.random() * chars.length)]).join('')
+}
+
+/* ── Checksums ──────────────────────────────────────────────────────────
+   Several formats below carry real check digits, so generated values pass
+   the same validation a genuine number would. */
+
+// Luhn (ISO/IEC 7812) check digit for a number that does not yet include one.
+// The rightmost existing digit sits in the doubled position of the final
+// number, so parity is measured against length + 1.
+function luhnCheckDigit(digits) {
+  let sum = 0
+  for (let i = digits.length - 1; i >= 0; i--) {
+    let d = digits[i]
+    if ((digits.length - i) % 2 === 1) { d *= 2; if (d > 9) d -= 9 }
+    sum += d
+  }
+  return (10 - (sum % 10)) % 10
+}
+
+/* ── Reserved / test-only ranges ────────────────────────────────────────
+   These exist so generated values can never collide with something real. */
+
+// Test-only issuer prefixes published by the card networks and payment
+// processors. They are not allocated to live issuers, so no real account can
+// exist beneath them — the randomised tail stays safe no matter what it lands on.
+const TEST_BINS = [
+  { prefix: '411111', length: 16 },
+  { prefix: '424242', length: 16 },
+  { prefix: '400000', length: 16 },
+  { prefix: '555555', length: 16 },
+  { prefix: '510510', length: 16 },
+  { prefix: '222100', length: 16 },
+  { prefix: '378282', length: 15 },
+  { prefix: '371449', length: 15 },
+]
+
+// Toll-free and N11 service codes are not valid geographic area codes.
+const TOLL_FREE_AREA = new Set([800, 833, 844, 855, 866, 877, 888])
+function areaCode() {
+  let a
+  do { a = 200 + Math.floor(Math.random() * 800) }
+  while (a % 100 === 11 || a === 555 || TOLL_FREE_AREA.has(a))
+  return a
+}
 
 export const generators = {
   names() {
@@ -58,9 +109,11 @@ export const generators = {
   },
 
   phones() {
-    const area = Math.floor(Math.random() * 800) + 200
-    const exch = Math.floor(Math.random() * 800) + 200
-    return `(${area}) ${exch}-${randDigits(4)}`
+    // NANPA permanently reserves 555-0100 … 555-0199 in every area code for
+    // fictional use, and no carrier may assign them. Anything generated here
+    // is therefore guaranteed not to reach a real person.
+    const line = 100 + Math.floor(Math.random() * 100)
+    return `(${areaCode()}) 555-0${line}`
   },
 
   username() {
@@ -186,13 +239,6 @@ export const generators = {
     return `${pad2(m)}/${pad2(d)}/${y}`
   },
 
-  shortYearDate() {
-    const y = Math.floor(Math.random() * 11) + 2018
-    const m = Math.floor(Math.random() * 12) + 1
-    const d = Math.floor(Math.random() * 28) + 1
-    return `${pad2(m)}/${pad2(d)}/${('' + y).slice(-2)}`
-  },
-
   abbrDate() {
     const mo = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
     const y = Math.floor(Math.random() * 11) + 2018
@@ -209,55 +255,36 @@ export const generators = {
     return `${mo[m]} ${d}, ${y}`
   },
 
-  timeValue() {
-    const h = Math.floor(Math.random() * 12) + 1
-    const m = Math.floor(Math.random() * 60)
-    const ap = Math.random() < 0.5 ? 'AM' : 'PM'
-    return `${h}:${pad2(m)} ${ap}`
-  },
-
   creditCard() {
-    const isVisa = Math.random() < 0.5
-    const digits = []
-    if (isVisa) {
-      digits.push(4)
-      for (let i = 0; i < 14; i++) digits.push(Math.floor(Math.random() * 10))
-    } else {
-      const ft = Math.floor(Math.random() * 5) + 51
-      digits.push(Math.floor(ft / 10), ft % 10)
-      for (let i = 0; i < 13; i++) digits.push(Math.floor(Math.random() * 10))
-    }
-    let sum = 0
-    for (let i = digits.length - 1; i >= 0; i--) {
-      let d = digits[i]
-      if ((digits.length - i) % 2 === 0) { d *= 2; if (d > 9) d -= 9 }
-      sum += d
-    }
-    digits.push((10 - (sum % 10)) % 10)
+    const bin = pick(TEST_BINS)
+    const digits = bin.prefix.split('').map(Number)
+    // Fill up to one short of the full length, then close with a real Luhn digit.
+    while (digits.length < bin.length - 1) digits.push(Math.floor(Math.random() * 10))
+    digits.push(luhnCheckDigit(digits))
     const s = digits.join('')
-    return `${s.slice(0, 4)} ${s.slice(4, 8)} ${s.slice(8, 12)} ${s.slice(12, 16)}`
+    // Amex groups 4-6-5; everyone else groups in fours.
+    return s.length === 15
+      ? `${s.slice(0, 4)} ${s.slice(4, 10)} ${s.slice(10)}`
+      : s.replace(/(\d{4})(?=\d)/g, '$1 ')
   },
 
-  currency() {
-    const tier = Math.random()
-    let cents
-    if (tier < 0.25) cents = Math.floor(Math.random() * 9999) + 1
-    else if (tier < 0.65) cents = Math.floor(Math.random() * 990000) + 10000
-    else cents = Math.floor(Math.random() * 99000000) + 1000000
-    const dollars = Math.floor(cents / 100)
-    const c = pad2(cents % 100)
-    const d = '' + dollars
-    let withCommas = ''
-    for (let i = 0; i < d.length; i++) {
-      if (i > 0 && (d.length - i) % 3 === 0) withCommas += ','
-      withCommas += d[i]
-    }
-    return `$${withCommas}.${c}`
+  cardExpiryCvv() {
+    // Always 1–60 months out, so it never reads as an expired card.
+    const d = new Date()
+    d.setMonth(d.getMonth() + 1 + Math.floor(Math.random() * 60))
+    // Amex uses a 4-digit CID; the other networks use 3.
+    const cvv = Math.random() < 0.25 ? randDigits(4) : randDigits(3)
+    return `${pad2(d.getMonth() + 1)}/${String(d.getFullYear()).slice(-2)} · ${cvv}`
   },
 
-  percentage() {
-    const val = Math.random() * 100
-    return Math.random() < 0.4 ? `${val.toFixed(1)}%` : `${Math.round(val)}%`
+  orderId() {
+    const year = new Date().getFullYear()
+    const r = Math.random()
+    if (r < 0.3) return `ORD-${year}-${randDigits(5)}`
+    if (r < 0.5) return `INV-${year}-${randDigits(4)}`
+    if (r < 0.7) return `#${randDigits(7)}`
+    if (r < 0.85) return `txn_${randMixed(24)}`
+    return `${randLetters(3)}-${randDigits(4)}-${randLetters(3)}`
   },
 
   ipv4() {
@@ -280,5 +307,19 @@ export const generators = {
       return v.length === 1 ? '0' + v : v
     }
     return Array.from({ length: 6 }, h).join(':')
+  },
+
+  uuid() {
+    if (typeof crypto !== 'undefined' && crypto.randomUUID) return crypto.randomUUID()
+    const b = new Uint8Array(16)
+    if (typeof crypto !== 'undefined' && crypto.getRandomValues) {
+      crypto.getRandomValues(b)
+    } else {
+      for (let i = 0; i < 16; i++) b[i] = Math.floor(Math.random() * 256)
+    }
+    b[6] = (b[6] & 0x0f) | 0x40 // version 4
+    b[8] = (b[8] & 0x3f) | 0x80 // variant 10xx
+    const hex = Array.from(b, v => v.toString(16).padStart(2, '0')).join('')
+    return `${hex.slice(0, 8)}-${hex.slice(8, 12)}-${hex.slice(12, 16)}-${hex.slice(16, 20)}-${hex.slice(20)}`
   },
 }

@@ -40,18 +40,16 @@ const BULK_OPTIONS = [
     group: 'Dates & Times',
     options: [
       { value: 'shortDate', label: 'Short Date (MM/DD/YYYY)' },
-      { value: 'shortYearDate', label: 'Short Year (MM/DD/YY)' },
       { value: 'abbrDate', label: 'Abbr Date (Jan 1, 2026)' },
       { value: 'longDate', label: 'Long Date' },
-      { value: 'timeValue', label: 'Time' },
     ],
   },
   {
     group: 'Payment & Numbers',
     options: [
       { value: 'creditCard', label: 'Credit Card' },
-      { value: 'currency', label: 'Currency' },
-      { value: 'percentage', label: 'Percentage' },
+      { value: 'cardExpiryCvv', label: 'Expiry + CVV' },
+      { value: 'orderId', label: 'Order / Transaction ID' },
     ],
   },
   {
@@ -60,9 +58,12 @@ const BULK_OPTIONS = [
       { value: 'ipv4', label: 'IPv4 Address' },
       { value: 'ipv6', label: 'IPv6 Address' },
       { value: 'macAddress', label: 'MAC Address' },
+      { value: 'uuid', label: 'UUID (v4)' },
     ],
   },
 ]
+
+const MAX_COUNT = 500
 
 export default function BulkGenerator() {
   const [type, setType] = useState('names')
@@ -70,10 +71,15 @@ export default function BulkGenerator() {
   const [output, setOutput] = useState('')
   const [copied, setCopied] = useState(false)
 
+  // NaN (empty field) compares false, so a cleared input reads as neutral, not invalid.
+  const outOfRange = count > MAX_COUNT || count < 1
+
   function generateBulk() {
     const fn = generators[type]
     if (!fn) return
-    const lines = Array.from({ length: Math.max(1, count || 10) }, () => fn())
+    // Empty field falls back to the default; any real number clamps into 1–MAX_COUNT.
+    const n = Number.isNaN(count) ? 10 : Math.min(MAX_COUNT, Math.max(1, count))
+    const lines = Array.from({ length: n }, () => fn())
     setOutput(lines.join('\n'))
     setCopied(false)
   }
@@ -93,7 +99,10 @@ export default function BulkGenerator() {
     >
       <div className="text-xl font-extrabold mb-5 flex items-center gap-3 display" style={{ color: 'var(--ink)' }}>
         <span className="icon-chip"><ClipboardText size={22} weight="bold" /></span>
-        Bulk Generator
+        <span>
+          Bulk Generator{' '}
+          <span className="text-sm font-bold opacity-55">(max {MAX_COUNT})</span>
+        </span>
       </div>
 
       <div className="flex gap-4 items-center mb-5 flex-wrap">
@@ -113,12 +122,13 @@ export default function BulkGenerator() {
 
         <input
           type="number"
-          value={count}
+          value={Number.isNaN(count) ? '' : count}
           onChange={e => setCount(parseInt(e.target.value, 10))}
           min="1"
-          max="100"
+          max={MAX_COUNT}
           placeholder="Count"
-          className="field px-4 py-2.5 text-base w-24"
+          aria-invalid={outOfRange}
+          className={`field px-4 py-2.5 text-base w-24 ${outOfRange ? 'invalid' : ''}`}
         />
 
         <button onClick={generateBulk} className="btn-chunky px-6 py-3 text-base">

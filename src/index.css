@@ -21,6 +21,9 @@
     --green: #2BAA5E;
     --pink: #FE7EDD;
     --red: #E24C3D;
+    /* --red is a border/fill color — it only clears 3.67:1 as text on cream.
+       --red-ink is the text-safe variant, darkened here and lightened in dark mode. */
+    --red-ink: #C4321F;
 
     /* Per-card accent (overridden inline by each section) */
     --accent: var(--purple);
@@ -66,6 +69,7 @@
     --output-ink: #b3a99a;
     --success-bg: #103a25;
     --success-ink: #8ff0b7;
+    --red-ink: #F2705F;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -170,6 +174,10 @@ body {
     border-radius: 12px;
 }
 .field:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent); }
+
+/* Out-of-range value — generate still succeeds, but clamped to the max */
+.field.invalid { color: var(--red-ink); border-color: var(--red); box-shadow: 0 0 0 2px var(--red); }
+.field.invalid:focus { border-color: var(--red); box-shadow: 0 0 0 2px var(--red); }
 
 /* ── Bulk select dropdown ── */
 .bulk-select {

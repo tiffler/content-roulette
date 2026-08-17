@@ -3,9 +3,9 @@ import {
   User, Users, Briefcase, SmileyWink, At, EnvelopeSimple, Envelope, Phone, MapPin,
   Buildings, AppWindow, Tag, LinkSimple,
   Laptop, Desktop, Barcode, Hash, Package, Truck,
-  CalendarBlank, Calendar, CalendarCheck, CalendarDots, Clock,
-  CreditCard, CurrencyDollar, Percent,
-  Globe, GlobeSimple, Circuitry,
+  CalendarBlank, Calendar, CalendarCheck, CalendarDots,
+  CreditCard, LockKey, Receipt,
+  Globe, GlobeSimple, Circuitry, Fingerprint,
 } from '@phosphor-icons/react'
 import GeneratorCard from './GeneratorCard'
 
@@ -61,10 +61,8 @@ const SECTIONS = [
     icon: <Calendar size={ICON_SIZE} weight="bold" />,
     cards: [
       { type: 'shortDate', title: 'Short Date', subtitle: 'MM/DD/YYYY', icon: <CalendarBlank size={ICON_SIZE} />, label: 'Generate Date' },
-      { type: 'shortYearDate', title: 'Short Year Date', subtitle: 'MM/DD/YY', icon: <Calendar size={ICON_SIZE} />, label: 'Generate Date' },
       { type: 'abbrDate', title: 'Abbr Date', subtitle: 'Jan 1, 2026', icon: <CalendarCheck size={ICON_SIZE} />, label: 'Generate Date' },
       { type: 'longDate', title: 'Long Date', subtitle: 'January 1, 2026', icon: <CalendarDots size={ICON_SIZE} />, label: 'Generate Date' },
-      { type: 'timeValue', title: 'Time', icon: <Clock size={ICON_SIZE} />, label: 'Generate Time' },
     ],
   },
   {
@@ -74,8 +72,8 @@ const SECTIONS = [
     icon: <CreditCard size={ICON_SIZE} weight="bold" />,
     cards: [
       { type: 'creditCard', title: 'Credit Card', icon: <CreditCard size={ICON_SIZE} />, label: 'Generate Card #' },
-      { type: 'currency', title: 'Currency ($USD)', icon: <CurrencyDollar size={ICON_SIZE} />, label: 'Generate Amount' },
-      { type: 'percentage', title: 'Percentage', icon: <Percent size={ICON_SIZE} />, label: 'Generate %' },
+      { type: 'cardExpiryCvv', title: 'Expiry + CVV', icon: <LockKey size={ICON_SIZE} />, label: 'Generate Expiry + CVV' },
+      { type: 'orderId', title: 'Order / Transaction ID', icon: <Receipt size={ICON_SIZE} />, label: 'Generate Order ID' },
     ],
   },
   {
@@ -87,6 +85,7 @@ const SECTIONS = [
       { type: 'ipv4', title: 'IPv4 Address', icon: <Globe size={ICON_SIZE} />, label: 'Generate IPv4' },
       { type: 'ipv6', title: 'IPv6 Address', icon: <GlobeSimple size={ICON_SIZE} />, label: 'Generate IPv6' },
       { type: 'macAddress', title: 'MAC Address', icon: <Circuitry size={ICON_SIZE} />, label: 'Generate MAC' },
+      { type: 'uuid', title: 'UUID (v4)', icon: <Fingerprint size={ICON_SIZE} />, label: 'Generate UUID' },
     ],
   },
 ]

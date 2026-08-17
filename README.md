@@ -15,8 +15,8 @@ Generates realistic-looking mock data so your designs don't look like they were 
 - 👤 **People & Contact** — full names, job titles, fun job titles, usernames, personal and work emails, phone numbers, addresses
 - 🏢 **Business & Apps** — organization names, app names, status labels, URLs
 - 💻 **Laptops & Assets** — Mac and Windows device names, asset names, serial numbers, UPS and FedEx tracking
-- 📅 **Dates & Times** — four date formats (`MM/DD/YYYY`, `MM/DD/YY`, `Jan 1, 2026`, `January 1, 2026`) and times
-- 💳 **Payment & Numbers** — credit cards, USD amounts, percentages
+- 📅 **Dates & Times** — three date formats (`MM/DD/YYYY`, `Jan 1, 2026`, `January 1, 2026`)
+- 💳 **Payment & Numbers** — credit cards, expiry + CVV, order IDs
 - 🌐 **Network** — IPv4, IPv6, and MAC addresses
 
 Need more than one? The **Bulk Generator** spits out any type in whatever quantity you ask for, ready to paste as a list. There's also a dark/light toggle that remembers what you picked.

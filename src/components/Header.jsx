@@ -39,7 +39,7 @@ export default function Header({ theme, onToggleTheme }) {
       </button>
 
       <h1
-        className="display text-5xl sm:text-6xl font-extrabold mb-3 text-[#FBF3DE] flex items-center justify-center gap-3 leading-none"
+        className="display text-5xl sm:text-6xl font-extrabold mb-3 text-[#FBF3DE] flex flex-col sm:flex-row items-center justify-center gap-3 leading-none"
         style={{ textShadow: '3px 3px 0 #171717' }}
       >
         <span
@@ -51,9 +51,9 @@ export default function Header({ theme, onToggleTheme }) {
         Content Roulette
       </h1>
 
-      <p className="display text-lg font-bold text-[#FBF3DE] mb-3">Stop Lorem'ing your Ipsum</p>
+      <p className="display text-xl font-bold text-[#FBF3DE] mb-1.5">Stop Lorem'ing your Ipsum</p>
 
-      <p className="text-[#FBF3DE]/90 text-[14pt] font-bold mb-5">
+      <p className="text-[#FBF3DE]/90 text-lg font-bold mb-5">
         Randomly generate realistic mock data · Built by{' '}
         <a href="https://www.tienmedia.com" target="_blank" rel="noopener" className="underline underline-offset-2 hover:text-white">
           tiffler
